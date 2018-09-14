@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3f9f1e23-f533-4290-a191-50505cecdcc2",
+		"_postman_id": "d2000817-763e-4b38-a560-86f82a4a9209",
 		"name": "Earthport-Payments-API",
 		"description": "This Postman collection contains sample requests for all of Earthport's Payment APIs.\n\nEach resource is split up into separate sub-folders. Each resource also contains samples of exception case requests. i.e. requests which will return various types of validation error.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -195,6 +195,9 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -260,72 +263,6 @@
 					}
 				}
 			]
-		},
-		{
-			"name": "S5: GET Payout Meta Bank Account",
-			"item": [
-				{
-					"name": "GET payout/meta",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\"getPayoutRequiredDataForCountryCurrency\":{\r\n      \"countryCode\": \"GB\",\r\n      \"currencyCode\": \"GBP\",\r\n      \"beneficiaryIdentityEntityType\": \"individual\",\r\n      \"serviceLevel\": \"standard\"\r\n    }\r\n}"
-						},
-						"url": {
-							"raw": "https://{{host}}/v1/users/3430090148263/bank-accounts/7426832/payments/meta?amount=500&currency=EUR&payerType=user&serviceLevel=standard",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"3430090148263",
-								"bank-accounts",
-								"7426832",
-								"payments",
-								"meta"
-							],
-							"query": [
-								{
-									"key": "amount",
-									"value": "500"
-								},
-								{
-									"key": "currency",
-									"value": "EUR"
-								},
-								{
-									"key": "payerType",
-									"value": "user"
-								},
-								{
-									"key": "serviceLevel",
-									"value": "standard"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"auth": {
-				"type": "bearer",
-				"bearer": [
-					{
-						"key": "token",
-						"value": "{{access_token}}",
-						"type": "string"
-					}
-				]
-			}
 		},
 		{
 			"name": "Users",
@@ -1110,6 +1047,848 @@
 							}
 						]
 					},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Update User",
+					"item": [
+						{
+							"name": "exception cases",
+							"item": [
+								{
+									"name": "PUT Users : Optional Field Not sent (address Line 2 &3)",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "64870af5-68e1-4245-b105-ff44f76796d1",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n         \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users : Field order changed (identificationNumber and idType) : Fails with SOAP",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n     \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users Fail: Both Identities",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('Both legal entity and individual identity provided within PayerIdentity token.');",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users Fail: No Identity",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "551e6808-9f14-4ba5-a90d-5f56def55bd4",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "de0c8c27-edf9-410f-b404-262fa7bb88c7",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('No legal entity or individual identity provided within PayerIdentity token.');",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users Fail: Mandatory Field Not Sent",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "51929099-4add-491c-9a72-79b19b30cefe",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users Fail : Wrong Mandatory Field Name",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users Fail : Wrong key in additional data",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "08e85961-5e58-46b9-9a9e-f542485c2a5c",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "b2c8f2cf-8894-44a8-b13b-57bd23fc076d",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"shortMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var shortMsg = jsonData.shortMsg;",
+													"    ",
+													"    console.log('shortMsg=='+shortMsg);",
+													"    ",
+													"    pm.expect(shortMsg).to.equal('The additional data key supplied is not known');",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"WRONG_KEY\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "PUT Users Fail: Blank request data",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "31077fcd-f4ec-4417-b52d-0436777ed989",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "69f8e00a-c525-4bf6-9fb9-95690b1d3783",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090152208",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090152208"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "PUT Users : Individual Identity",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090152208",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090152208"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Users : legal Entity Identity",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090152208",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090152208"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Disable User",
+					"item": [
+						{
+							"name": "DISABLE user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151111",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151111"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get User",
+					"item": [
+						{
+							"name": "GET user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090152222",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090152222"
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"_postman_isSubFolder": true
 				}
 			]
@@ -3639,6 +4418,113 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get beneficiary bank account",
+					"item": [
+						{
+							"name": "GET Bank Account",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151590/bank-accounts/7432145",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151590",
+										"bank-accounts",
+										"7432145"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Disable beneficiary bank account",
+					"item": [
+						{
+							"name": "DELETE Bank Account",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151590/bank-accounts/7431798",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151590",
+										"bank-accounts",
+										"7431798"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List beneficiary bank accounts",
+					"item": [
+						{
+							"name": "GET bank-account",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151590/bank-accounts?",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151590",
+										"bank-accounts"
+									],
+									"query": [
+										{
+											"key": "includeDeleted",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -4968,6 +5854,63 @@
 						]
 					},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Payment bank account meta data",
+					"item": [
+						{
+							"name": "GET payout/meta",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"getPayoutRequiredDataForCountryCurrency\":{\r\n      \"countryCode\": \"GB\",\r\n      \"currencyCode\": \"GBP\",\r\n      \"beneficiaryIdentityEntityType\": \"individual\",\r\n      \"serviceLevel\": \"standard\"\r\n    }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090148263/bank-accounts/7426832/payments/meta?amount=500&currency=EUR&payerType=user&serviceLevel=standard",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090148263",
+										"bank-accounts",
+										"7426832",
+										"payments",
+										"meta"
+									],
+									"query": [
+										{
+											"key": "amount",
+											"value": "500"
+										},
+										{
+											"key": "currency",
+											"value": "EUR"
+										},
+										{
+											"key": "payerType",
+											"value": "user"
+										},
+										{
+											"key": "serviceLevel",
+											"value": "standard"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -5419,6 +6362,55 @@
 							"response": []
 						},
 						{
+							"name": "GET Statements GBP with Pagination",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=GBP&sortOrder=DESC&offset=2&pageSize=3",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"statements"
+									],
+									"query": [
+										{
+											"key": "startDateTime",
+											"value": "2018-01-01T00:00:47Z"
+										},
+										{
+											"key": "endDateTime",
+											"value": "2018-10-01T00:00:47Z"
+										},
+										{
+											"key": "currency",
+											"value": "GBP"
+										},
+										{
+											"key": "sortOrder",
+											"value": "DESC"
+										},
+										{
+											"key": "offset",
+											"value": "2"
+										},
+										{
+											"key": "pageSize",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "GET Statements USD",
 							"request": {
 								"method": "GET",
@@ -5494,6 +6486,55 @@
 										{
 											"key": "sortOrder",
 											"value": "DESC"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Statements GBP with Pagination",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=GBP&sortOrder=DESC&offset=2&pageSize=3",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"statements"
+									],
+									"query": [
+										{
+											"key": "startDateTime",
+											"value": "2018-01-01T00:00:47Z"
+										},
+										{
+											"key": "endDateTime",
+											"value": "2018-10-01T00:00:47Z"
+										},
+										{
+											"key": "currency",
+											"value": "GBP"
+										},
+										{
+											"key": "sortOrder",
+											"value": "DESC"
+										},
+										{
+											"key": "offset",
+											"value": "2"
+										},
+										{
+											"key": "pageSize",
+											"value": "3"
 										}
 									]
 								}
@@ -6033,6 +7074,272 @@
 						]
 					},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Bulk Quotes",
+					"item": [
+						{
+							"name": "GET bulkQuotes Single",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"    ",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n{\r\n\"sellCurrency\":\"EUR\",\r\n\"buyCountry\":\"GB\",\r\n\"buyCurrency\":\"GBP\",\r\n\"serviceLevel\":\"standard\"\r\n}\r\n]"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/quotes/bulk",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"quotes",
+										"bulk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET bulkQuotes Multiple",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"    ",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n{\r\n\"sellCurrency\":\"EUR\",\r\n\"buyCountry\":\"GB\",\r\n\"buyCurrency\":\"GBP\",\r\n\"serviceLevel\":\"standard\"\r\n},\r\n{\r\n\"sellCurrency\":\"USD\",\r\n\"buyCountry\":\"GB\",\r\n\"buyCurrency\":\"GBP\",\r\n\"serviceLevel\":\"standard\"\r\n},\r\n{\r\n\"sellCurrency\":\"AUD\",\r\n\"buyCountry\":\"GB\",\r\n\"buyCurrency\":\"GBP\",\r\n\"serviceLevel\":\"standard\"\r\n}\r\n]"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/quotes/bulk",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"quotes",
+										"bulk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET bulkQuotes same currency",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"    ",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n{\r\n\"sellCurrency\":\"GBP\",\r\n\"buyCountry\":\"GB\",\r\n\"buyCurrency\":\"GBP\",\r\n\"serviceLevel\":\"standard\"\r\n}\r\n]"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/quotes/bulk",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"quotes",
+										"bulk"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET bulkQuotes Fail: Wrong country-currency combination",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"    ",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n{\r\n\"sellCurrency\":\"EUR\",\r\n\"buyCountry\":\"FR\",\r\n\"buyCurrency\":\"GBP\",\r\n\"serviceLevel\":\"standard\"\r\n}\r\n]"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/quotes/bulk",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"quotes",
+										"bulk"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{access_token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4a103140-b744-4777-bdeb-6e22459e1a2e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "3917e946-1d98-43c0-8daa-b3576205e009",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -6193,6 +7500,198 @@
 									""
 								]
 							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Cancel a transaction",
+					"item": [
+						{
+							"name": "CANCEL Transaction",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/transactions/281474988434819?merchantCancellationReqID=12345",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"transactions",
+										"281474988434819"
+									],
+									"query": [
+										{
+											"key": "merchantCancellationReqID",
+											"value": "12345"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Search transactions",
+					"item": [
+						{
+							"name": "SEARCH Transaction",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/transactions?currency=GBP&startDateTime=2018-01-01T07:36:28&endDateTime=2018-08-01T07:36:28&amountFrom=0&amountTo=50&sortOrder=DESC&sortFields=Timestamp,Amount&merchantTransactionID=txID_1532520105368&transactionType=Payout",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "currency",
+											"value": "GBP"
+										},
+										{
+											"key": "startDateTime",
+											"value": "2018-01-01T07:36:28"
+										},
+										{
+											"key": "endDateTime",
+											"value": "2018-08-01T07:36:28"
+										},
+										{
+											"key": "amountFrom",
+											"value": "0"
+										},
+										{
+											"key": "amountTo",
+											"value": "50"
+										},
+										{
+											"key": "sortOrder",
+											"value": "DESC"
+										},
+										{
+											"key": "sortFields",
+											"value": "Timestamp,Amount"
+										},
+										{
+											"key": "merchantTransactionID",
+											"value": "txID_1532520105368"
+										},
+										{
+											"key": "transactionType",
+											"value": "Payout"
+										},
+										{
+											"key": "transactionStatusCode",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										},
+										{
+											"key": "pageSize",
+											"value": "5",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SEARCH Transaction with pagination",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/transactions?currency=GBP&startDateTime=2018-01-01T07:36:28&endDateTime=2018-08-01T07:36:28&amountFrom=0&amountTo=50&sortOrder=DESC&sortFields=Timestamp,Amount&merchantTransactionID=txID_1532520105368&transactionType=Payout&offset=0&pageSize=5",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"transactions"
+									],
+									"query": [
+										{
+											"key": "currency",
+											"value": "GBP"
+										},
+										{
+											"key": "startDateTime",
+											"value": "2018-01-01T07:36:28"
+										},
+										{
+											"key": "endDateTime",
+											"value": "2018-08-01T07:36:28"
+										},
+										{
+											"key": "amountFrom",
+											"value": "0"
+										},
+										{
+											"key": "amountTo",
+											"value": "50"
+										},
+										{
+											"key": "sortOrder",
+											"value": "DESC"
+										},
+										{
+											"key": "sortFields",
+											"value": "Timestamp,Amount"
+										},
+										{
+											"key": "merchantTransactionID",
+											"value": "txID_1532520105368"
+										},
+										{
+											"key": "transactionType",
+											"value": "Payout"
+										},
+										{
+											"key": "transactionStatusCode",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										},
+										{
+											"key": "pageSize",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -6385,6 +7884,129 @@
 								"actest",
 								"apps",
 								"actest-system"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Notification Test",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
+								"type": "text/javascript",
+								"exec": [
+									"var milliseconds = new Date().getTime();",
+									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "notification-type",
+									"value": "REFUND",
+									"type": "text"
+								},
+								{
+									"key": "company",
+									"value": "bank-of-america",
+									"type": "text"
+								},
+								{
+									"key": "app",
+									"value": "payments",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/notification/test",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"notification",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Notification Simulate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
+								"type": "text/javascript",
+								"exec": [
+									"var milliseconds = new Date().getTime();",
+									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "notification-type",
+									"value": "REFUND",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "https://webhook.site/3340f7bf-7bd0-468c-9ae2-832df9bc0e96",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{host}}/v1/notification/simulate",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"notification",
+								"simulate"
 							]
 						}
 					},
@@ -6756,8 +8378,106 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Settlement Calendar",
+			"item": [
+				{
+					"name": "Get Settlement Calander",
+					"item": [
+						{
+							"name": "GET Settlement Calander",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/settlement-calendar?serviceLevel=standard&beneficiaryCountry=FR&beneficiaryCurrency=EUR&payoutRequestCurrency=GBP&numberOfCalendarDays=1",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"settlement-calendar"
+									],
+									"query": [
+										{
+											"key": "serviceLevel",
+											"value": "standard"
+										},
+										{
+											"key": "beneficiaryCountry",
+											"value": "FR"
+										},
+										{
+											"key": "beneficiaryCurrency",
+											"value": "EUR"
+										},
+										{
+											"key": "payoutRequestCurrency",
+											"value": "GBP"
+										},
+										{
+											"key": "numberOfCalendarDays",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{access_token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "865d8168-f3f1-4e02-8ab2-bba8c1c718e6",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc5c5c57-036a-4c93-8ef6-7a26d426c02c",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
