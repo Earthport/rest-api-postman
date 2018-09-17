@@ -1955,7 +1955,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2026,7 +2026,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n     \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n     \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2097,7 +2097,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"WRONG_KEY\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"WRONG_KEY\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2168,7 +2168,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNamesX\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNamesX\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2239,7 +2239,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2381,109 +2381,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t  \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"users",
-												"3430090151617",
-												"bank-accounts"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "POST bank-accounts: Field order changed (identificationNumber and idType) : Fails with SOAP",
-									"event": [
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-												"type": "text/javascript",
-												"exec": [
-													"var milliseconds = new Date().getTime();",
-													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
-											}
-										},
-										{
-											"listen": "test",
-											"script": {
-												"id": "775c4f94-434b-4c56-a1b5-93da61f06264",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful POST request\", function () {",
-													"    pm.response.to.be.ok;",
-													"});",
-													"",
-													"pm.test(\"Response contains merchant bank ID\", function () {",
-													"    var expected_merchant_bank_id = \"bankID_\" + pm.globals.get(\"current_time_in_ms\");",
-													"    var jsonData = pm.response.json();",
-													"    var merchantBankID=jsonData.benBankID.merchantBankID;",
-													"    console.log('merchantBankID=='+merchantBankID);",
-													"",
-													"    pm.expect(merchantBankID).to.eql(expected_merchant_bank_id);",
-													"});",
-													"",
-													"",
-													"pm.test(\"Response contains correct epUserID\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
-													"    var jsonData = pm.response.json();",
-													"    var epUserID=jsonData.userID.epUserID.toString();",
-													"    var epUserID_url=pm.request.url.path[1];",
-													"     console.log('epUserID=='+epUserID);",
-													"      console.log('epUserID_url=='+epUserID_url);",
-													"    ",
-													"    pm.expect(epUserID_url).to.eql(epUserID);",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains Earthport generated bankID\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"epBankID\");",
-													"    ",
-													"    var jsonData = pm.response.json();",
-													"    var epBankID = jsonData.benBankID.epBankID;",
-													"    ",
-													"    console.log('epBankID=='+epBankID);",
-													"    ",
-													"     //Earthport bank ID is numeric",
-													"    var pattern = new RegExp(\"^[0-9]*$\");",
-													"    var match = pattern.test(epBankID);",
-													"    ",
-													"    console.log('pattern.test(epBankID)=='+pattern.test(epBankID));",
-													"    ",
-													"    pm.expect(match).to.be.true;",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"identificationNumber\": \"ABC123\",\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t  \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2588,211 +2486,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										"3430090151617",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts : unstructuredIdentity",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "bfbe0137-6cc0-43b0-8b7a-e3491842723c",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "17196aee-5993-4fe3-8deb-d0f5e8373f89",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"pm.test(\"Response contains merchant bank ID\", function () {",
-											"    var expected_merchant_bank_id = \"bankID_\" + pm.globals.get(\"current_time_in_ms\");",
-											"    var jsonData = pm.response.json();",
-											"    var merchantBankID=jsonData.benBankID.merchantBankID;",
-											"    console.log('merchantBankID=='+merchantBankID);",
-											"",
-											"    pm.expect(merchantBankID).to.eql(expected_merchant_bank_id);",
-											"});",
-											"",
-											"",
-											"pm.test(\"Response contains correct epUserID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
-											"    var jsonData = pm.response.json();",
-											"    var epUserID=jsonData.userID.epUserID.toString();",
-											"    var epUserID_url=pm.request.url.path[1];",
-											"     console.log('epUserID=='+epUserID);",
-											"      console.log('epUserID_url=='+epUserID_url);",
-											"    ",
-											"    pm.expect(epUserID_url).to.eql(epUserID);",
-											"});",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains Earthport generated bankID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"epBankID\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var epBankID = jsonData.benBankID.epBankID;",
-											"    ",
-											"    console.log('epBankID=='+epBankID);",
-											"    ",
-											"     //Earthport bank ID is numeric",
-											"    var pattern = new RegExp(\"^[0-9]*$\");",
-											"    var match = pattern.test(epBankID);",
-											"    ",
-											"    console.log('pattern.test(epBankID)=='+pattern.test(epBankID));",
-											"    ",
-											"    pm.expect(match).to.be.true;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"Name\",\n          \"Value\": \"John Smith\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										"3430090151617",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts: US/USD",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"pm.test(\"Response contains merchant bank ID\", function () {",
-											"    var expected_merchant_bank_id = \"bankID_\" + pm.globals.get(\"current_time_in_ms\");",
-											"    var jsonData = pm.response.json();",
-											"    var merchantBankID=jsonData.benBankID.merchantBankID;",
-											"    console.log('merchantBankID=='+merchantBankID);",
-											"",
-											"    pm.expect(merchantBankID).to.eql(expected_merchant_bank_id);",
-											"});",
-											"",
-											"",
-											"pm.test(\"Response contains correct epUserID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
-											"    var jsonData = pm.response.json();",
-											"    var epUserID=jsonData.userID.epUserID.toString();",
-											"    var epUserID_url=pm.request.url.path[1];",
-											"     console.log('epUserID=='+epUserID);",
-											"      console.log('epUserID_url=='+epUserID_url);",
-											"    ",
-											"    pm.expect(epUserID_url).to.eql(epUserID);",
-											"});",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains Earthport generated bankID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"epBankID\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var epBankID = jsonData.benBankID.epBankID;",
-											"    ",
-											"    console.log('epBankID=='+epBankID);",
-											"    ",
-											"    //Earthport bank ID is numeric",
-											"    var pattern = new RegExp(\"^[0-9]*$\");",
-											"    var match = pattern.test(epBankID);",
-											"    ",
-											"    console.log('pattern.test(epBankID)=='+pattern.test(epBankID));",
-											"    ",
-											"    pm.expect(match).to.be.true;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"US\",\n          \"postcode\": \"123456\",\n          \"province\": \"AZ\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"US\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"US\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"US\",\n    \"currencyCode\": \"USD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"0210000893\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"abaRoutingNumber\",\n        \"value\": \"081302633\"\n      },\n      {\n        \"key\": \"accountType\",\n        \"value\": \"1\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2894,7 +2588,109 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n        \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n        \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151617",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts : unstructuredIdentity",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "bfbe0137-6cc0-43b0-8b7a-e3491842723c",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "17196aee-5993-4fe3-8deb-d0f5e8373f89",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant bank ID\", function () {",
+											"    var expected_merchant_bank_id = \"bankID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantBankID=jsonData.benBankID.merchantBankID;",
+											"    console.log('merchantBankID=='+merchantBankID);",
+											"",
+											"    pm.expect(merchantBankID).to.eql(expected_merchant_bank_id);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response contains correct epUserID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID=jsonData.userID.epUserID.toString();",
+											"    var epUserID_url=pm.request.url.path[1];",
+											"     console.log('epUserID=='+epUserID);",
+											"      console.log('epUserID_url=='+epUserID_url);",
+											"    ",
+											"    pm.expect(epUserID_url).to.eql(epUserID);",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated bankID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epBankID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epBankID = jsonData.benBankID.epBankID;",
+											"    ",
+											"    console.log('epBankID=='+epBankID);",
+											"    ",
+											"     //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epBankID);",
+											"    ",
+											"    console.log('pattern.test(epBankID)=='+pattern.test(epBankID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"Name\",\n          \"Value\": \"John Smith\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -2996,7 +2792,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"FR\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"FR\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"FR\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"FR\",\n    \"currencyCode\": \"EUR\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"iban\",\n        \"value\": \"FR7630588600013765749018822\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"FR\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"FR\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"FR\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"FR\",\n    \"currencyCode\": \"EUR\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"iban\",\n        \"value\": \"FR7630588600013765749018822\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -3015,7 +2811,7 @@
 							"response": []
 						},
 						{
-							"name": "POST bank-accounts: Optional Field Not sent (address Line 2 &3)",
+							"name": "POST bank-accounts: US/USD",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -3031,7 +2827,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "989b4df8-eb45-41ce-b3ec-1de95a0c5a66",
+										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -3069,7 +2865,7 @@
 											"    ",
 											"    console.log('epBankID=='+epBankID);",
 											"    ",
-											"     //Earthport bank ID is numeric",
+											"    //Earthport bank ID is numeric",
 											"    var pattern = new RegExp(\"^[0-9]*$\");",
 											"    var match = pattern.test(epBankID);",
 											"    ",
@@ -3098,7 +2894,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"US\",\n          \"postcode\": \"123456\",\n          \"province\": \"AZ\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"US\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"US\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"US\",\n    \"currencyCode\": \"USD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"0210000893\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"abaRoutingNumber\",\n        \"value\": \"081302633\"\n      },\n      {\n        \"key\": \"accountType\",\n        \"value\": \"1\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -3200,7 +2996,211 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"AU\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"AU\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"AU\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"AU\",\n    \"currencyCode\": \"AUD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"000414001\"\n      },\n      {\n        \"key\": \"bankCode\",\n        \"value\": \"342\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"branchCode\",\n        \"value\": \"307\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"AU\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"AU\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"AU\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"AU\",\n    \"currencyCode\": \"AUD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"000414001\"\n      },\n      {\n        \"key\": \"bankCode\",\n        \"value\": \"342\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"branchCode\",\n        \"value\": \"307\"\n      }\n    ]\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151617",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts: Optional Field Not sent (address Line 2 &3)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "989b4df8-eb45-41ce-b3ec-1de95a0c5a66",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant bank ID\", function () {",
+											"    var expected_merchant_bank_id = \"bankID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantBankID=jsonData.benBankID.merchantBankID;",
+											"    console.log('merchantBankID=='+merchantBankID);",
+											"",
+											"    pm.expect(merchantBankID).to.eql(expected_merchant_bank_id);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response contains correct epUserID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID=jsonData.userID.epUserID.toString();",
+											"    var epUserID_url=pm.request.url.path[1];",
+											"     console.log('epUserID=='+epUserID);",
+											"      console.log('epUserID_url=='+epUserID_url);",
+											"    ",
+											"    pm.expect(epUserID_url).to.eql(epUserID);",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated bankID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epBankID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epBankID = jsonData.benBankID.epBankID;",
+											"    ",
+											"    console.log('epBankID=='+epBankID);",
+											"    ",
+											"     //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epBankID);",
+											"    ",
+											"    console.log('pattern.test(epBankID)=='+pattern.test(epBankID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090151617",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts: Field order changed (identificationNumber and idType) : Fails with SOAP",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "775c4f94-434b-4c56-a1b5-93da61f06264",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant bank ID\", function () {",
+											"    var expected_merchant_bank_id = \"bankID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantBankID=jsonData.benBankID.merchantBankID;",
+											"    console.log('merchantBankID=='+merchantBankID);",
+											"",
+											"    pm.expect(merchantBankID).to.eql(expected_merchant_bank_id);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response contains correct epUserID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID=jsonData.userID.epUserID.toString();",
+											"    var epUserID_url=pm.request.url.path[1];",
+											"     console.log('epUserID=='+epUserID);",
+											"      console.log('epUserID_url=='+epUserID_url);",
+											"    ",
+											"    pm.expect(epUserID_url).to.eql(epUserID);",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated bankID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epBankID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epBankID = jsonData.benBankID.epBankID;",
+											"    ",
+											"    console.log('epBankID=='+epBankID);",
+											"    ",
+											"     //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epBankID);",
+											"    ",
+											"    console.log('pattern.test(epBankID)=='+pattern.test(epBankID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"identificationNumber\": \"ABC123\",\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
@@ -3359,7 +3359,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3428,7 +3428,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n    \t\"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n    \t\"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3497,7 +3497,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNamesX\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNamesX\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3566,7 +3566,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"WRONG_KEY\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"WRONG_KEY\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3635,7 +3635,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"Name\",\n          \"Value\": \"John Smith\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"Name\",\n          \"Value\": \"John Smith\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3704,7 +3704,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t  \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t  \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"unstructuredIdentity\": [\n        {\n          \"Key\": \"K1\",\n          \"Value\": \"V1\"\n        }\n      ],\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3773,7 +3773,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n     \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+											"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n     \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/bank-accounts",
@@ -3850,377 +3850,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts: US/USD",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "3f3ec1d9-d768-4a20-ba3a-a987c071486b",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains correct error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var isBankAccountValid = jsonData.isBankAccountValid;",
-											"    ",
-											"    console.log('isBankAccountValid=='+isBankAccountValid);",
-											"    ",
-											"    pm.expect(isBankAccountValid).to.equal(true);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"US\",\n          \"postcode\": \"123456\",\n          \"province\": \"AZ\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"US\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"US\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"US\",\n    \"currencyCode\": \"USD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"0210000893\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"abaRoutingNumber\",\n        \"value\": \"081302633\"\n      },\n      {\n        \"key\": \"accountType\",\n        \"value\": \"1\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts: Optional Field Not sent (address Line 2 &3)",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "873f8b8d-400c-4639-b11a-f615f2b0c94e",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains correct error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var isBankAccountValid = jsonData.isBankAccountValid;",
-											"    ",
-											"    console.log('isBankAccountValid=='+isBankAccountValid);",
-											"    ",
-											"    pm.expect(isBankAccountValid).to.equal(true);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts: Field order changed (identificationNumber and idType) : Fails with SOAP",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "76ba0a35-f72f-4f10-b522-792d6f1eef1b",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains correct error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var isBankAccountValid = jsonData.isBankAccountValid;",
-											"    ",
-											"    console.log('isBankAccountValid=='+isBankAccountValid);",
-											"    ",
-											"    pm.expect(isBankAccountValid).to.equal(true);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"identificationNumber\": \"ABC123\",\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts: FR/EUR",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "00de6490-002a-4c52-b2b6-243b05f273f6",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains correct error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var isBankAccountValid = jsonData.isBankAccountValid;",
-											"    ",
-											"    console.log('isBankAccountValid=='+isBankAccountValid);",
-											"    ",
-											"    pm.expect(isBankAccountValid).to.equal(true);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"FR\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"FR\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"FR\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"FR\",\n    \"currencyCode\": \"EUR\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"iban\",\n        \"value\": \"FR7630588600013765749018822\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/bank-accounts",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"bank-accounts"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "POST bank-accounts: US/USD Copy",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "3f3ec1d9-d768-4a20-ba3a-a987c071486b",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains correct error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var isBankAccountValid = jsonData.isBankAccountValid;",
-											"    ",
-											"    console.log('isBankAccountValid=='+isBankAccountValid);",
-											"    ",
-											"    pm.expect(isBankAccountValid).to.equal(true);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"US\",\n          \"postcode\": \"123456\",\n          \"province\": \"AZ\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"US\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"US\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"US\",\n    \"currencyCode\": \"USD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"0210000893\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"abaRoutingNumber\",\n        \"value\": \"081302633\"\n      },\n      {\n        \"key\": \"accountType\",\n        \"value\": \"1\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/bank-accounts",
@@ -4294,7 +3924,155 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n        \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n    \"beneficiaryIdentity\": {\n        \"legalEntityIdentity\": {\n        \"legalEntityName\": \"XYZ Corp\",\n        \"legalEntityRegistration\": {\n          \"legalEntityRegistrationCountry\": \"GB\",\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\n          \"legalEntityRegistrationProvince\": \"ABC\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        }\n      },\n      \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts: FR/EUR",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "00de6490-002a-4c52-b2b6-243b05f273f6",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains correct error message\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var isBankAccountValid = jsonData.isBankAccountValid;",
+											"    ",
+											"    console.log('isBankAccountValid=='+isBankAccountValid);",
+											"    ",
+											"    pm.expect(isBankAccountValid).to.equal(true);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"FR\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"FR\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"FR\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"FR\",\n    \"currencyCode\": \"EUR\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"iban\",\n        \"value\": \"FR7630588600013765749018822\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      }\n    ]\n  }\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts: US/USD",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f3ec1d9-d768-4a20-ba3a-a987c071486b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains correct error message\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var isBankAccountValid = jsonData.isBankAccountValid;",
+											"    ",
+											"    console.log('isBankAccountValid=='+isBankAccountValid);",
+											"    ",
+											"    pm.expect(isBankAccountValid).to.equal(true);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"US\",\n          \"postcode\": \"123456\",\n          \"province\": \"AZ\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"US\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"US\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"US\",\n    \"currencyCode\": \"USD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"0210000893\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"abaRoutingNumber\",\n        \"value\": \"081302633\"\n      },\n      {\n        \"key\": \"accountType\",\n        \"value\": \"1\"\n      }\n    ]\n  }\n"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/bank-accounts",
@@ -4368,7 +4146,155 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"AU\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"AU\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"AU\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"AU\",\n    \"currencyCode\": \"AUD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"000414001\"\n      },\n      {\n        \"key\": \"bankCode\",\n        \"value\": \"342\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"branchCode\",\n        \"value\": \"307\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"AU\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"AU\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"AU\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"AU\",\n    \"currencyCode\": \"AUD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"000414001\"\n      },\n      {\n        \"key\": \"bankCode\",\n        \"value\": \"342\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"branchCode\",\n        \"value\": \"307\"\n      }\n    ]\n  }\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts: Optional Field Not sent (address Line 2 &3)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "873f8b8d-400c-4639-b11a-f615f2b0c94e",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains correct error message\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var isBankAccountValid = jsonData.isBankAccountValid;",
+											"    ",
+											"    console.log('isBankAccountValid=='+isBankAccountValid);",
+											"    ",
+											"    pm.expect(isBankAccountValid).to.equal(true);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/bank-accounts",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"bank-accounts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST bank-accounts: Field order changed (identificationNumber and idType) : Fails with SOAP",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "76ba0a35-f72f-4f10-b522-792d6f1eef1b",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains correct error message\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"isBankAccountValid\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var isBankAccountValid = jsonData.isBankAccountValid;",
+											"    ",
+											"    console.log('isBankAccountValid=='+isBankAccountValid);",
+											"    ",
+											"    pm.expect(isBankAccountValid).to.equal(true);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"identificationNumber\": \"ABC123\",\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/bank-accounts",
@@ -5534,7 +5460,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\n  \"accountCurrency\": \"GBP\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"Key\": \"NATIONAL_ID_CARD\",\n        \"Value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n\n\n\t\n\t\n}"
+									"raw": "{\n\t\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\n  \"accountCurrency\": \"GBP\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"Key\": \"NATIONAL_ID_CARD\",\n        \"Value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments",
@@ -5575,7 +5501,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"user\":{\n  \"userID\": {\"epUserID\": 3430090150959,\"merchantUserID\": \"userID_1530273846030\"},\n  \"accountCurrency\": \"GBP\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"Key\": \"NATIONAL_ID_CARD\",\n        \"Value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n\n\n\t\n\t\n}"
+									"raw": "{\n\t\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_1530273846030\"},\n  \"accountCurrency\": \"GBP\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"Key\": \"NATIONAL_ID_CARD\",\n        \"Value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments",
@@ -5616,7 +5542,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"user\":{\n  \"userID\": {\"epUserID\": 3430090150959,\"merchantUserID\": \"userID_1530273846030\"},\n  \"accountCurrency\": \"GBP\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"Key\": \"NATIONAL_ID_CARD\",\n        \"Value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\": {\"epBankID\": 7430125,\"merchantBankID\": \"bankID_1530273906017\"},\n  \"beneficiaryBankAccount\": {\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n  }\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n\n\n\t\n\t\n}"
+									"raw": "{\n\t\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_1530273846030\"},\n  \"accountCurrency\": \"GBP\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"Key\": \"NATIONAL_ID_CARD\",\n        \"Value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\": {\"merchantBankID\": \"bankID_1530273906017\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments",
