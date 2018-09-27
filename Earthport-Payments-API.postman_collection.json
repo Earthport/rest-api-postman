@@ -1890,6 +1890,935 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Add Deposit Reference",
+					"item": [
+						{
+							"name": "POST Deposit Reference",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"depositReference\": \"44EPT1234549\"\r\n}\r\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090155631/deposit-references",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090155631",
+										"deposit-references"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Validate User",
+					"item": [
+						{
+							"name": "exception cases",
+							"item": [
+								{
+									"name": "POST Users Fail: No Identity",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "551e6808-9f14-4ba5-a90d-5f56def55bd4",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "de0c8c27-edf9-410f-b404-262fa7bb88c7",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('No legal entity or individual identity provided within PayerIdentity token.');",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "action",
+													"value": "validate"
+												},
+												{
+													"key": "beneficiaryCountryCode",
+													"value": "GB"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST Users Fail: Mandatory Field Not Sent",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "51929099-4add-491c-9a72-79b19b30cefe",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "action",
+													"value": "validate"
+												},
+												{
+													"key": "beneficiaryCountryCode",
+													"value": "GB"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST Users Fail : Wrong key in additional data",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "08e85961-5e58-46b9-9a9e-f542485c2a5c",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "b2c8f2cf-8894-44a8-b13b-57bd23fc076d",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"shortMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var shortMsg = jsonData.shortMsg;",
+													"    ",
+													"    console.log('shortMsg=='+shortMsg);",
+													"    ",
+													"    pm.expect(shortMsg).to.equal('The additional data key supplied is not known');",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"WRONG_KEY\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "action",
+													"value": "validate"
+												},
+												{
+													"key": "beneficiaryCountryCode",
+													"value": "GB"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST Users Fail: Blank request data",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "31077fcd-f4ec-4417-b52d-0436777ed989",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "69f8e00a-c525-4bf6-9fb9-95690b1d3783",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "action",
+													"value": "validate"
+												},
+												{
+													"key": "beneficiaryCountryCode",
+													"value": "GB"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST Users Fail: Both Identities",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('Both legal entity and individual identity provided within PayerIdentity token.');",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "action",
+													"value": "validate"
+												},
+												{
+													"key": "beneficiaryCountryCode",
+													"value": "GB"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "POST Users Fail : Wrong Mandatory Field Name",
+									"event": [
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
+												"type": "text/javascript",
+												"exec": [
+													"var milliseconds = new Date().getTime();",
+													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+												]
+											}
+										},
+										{
+											"listen": "test",
+											"script": {
+												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
+												"type": "text/javascript",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"pm.test(\"Response contains merchant User ID\", function () {",
+													"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+													"});",
+													"",
+													"pm.test(\"Response contains Earthport generated VAN\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var epUserID = jsonData.epUserID;",
+													"    ",
+													"    console.log('epUserID=='+epUserID);",
+													"    ",
+													"    //Earthport VAN is 13 digits and starts with 34",
+													"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+													"    var match = pattern.test(epUserID);",
+													"    ",
+													"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+													"    ",
+													"    pm.expect(match).to.be.true;",
+													"});",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												]
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"userID\": {\"merchantUserIDX\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users"
+											],
+											"query": [
+												{
+													"key": "action",
+													"value": "validate"
+												},
+												{
+													"key": "beneficiaryCountryCode",
+													"value": "GB"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "POST Users : Individual Identity",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "validate"
+										},
+										{
+											"key": "beneficiaryCountryCode",
+											"value": "GB"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Users : legal Entity Identity",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "validate"
+										},
+										{
+											"key": "beneficiaryCountryCode",
+											"value": "GB"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Users : Optional Field Not sent (address Line 2 &3)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "64870af5-68e1-4245-b105-ff44f76796d1",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n         \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "validate"
+										},
+										{
+											"key": "beneficiaryCountryCode",
+											"value": "GB"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Users : Field order changed (identificationNumber and idType) : Fails with SOAP",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
+										"type": "text/javascript",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"GBP\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n     \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users?action=validate&beneficiaryCountryCode=GB",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "validate"
+										},
+										{
+											"key": "beneficiaryCountryCode",
+											"value": "GB"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		},
@@ -4341,6 +5270,165 @@
 									""
 								]
 							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Validate beneficiary bank account with expected settlement date",
+					"item": [
+						{
+							"name": "POST Validate Beneficiary and get expected settlement (Individual Identity)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n            \"beneficiaryIdentity\": {\r\n      \"individualIdentity\": {\r\n        \"name\": {\r\n          \"familyName\": \"Smith\",\r\n          \"givenNames\": \"John\"\r\n        },\r\n        \"address\": {\r\n          \"addressLine1\": \"ABC\",\r\n          \"addressLine2\": \"ABC\",\r\n          \"addressLine3\": \"ABC\",\r\n          \"city\": \"ABC\",\r\n          \"country\": \"GB\",\r\n          \"postcode\": \"EC1A 4HY\",\r\n          \"province\": \"ABC\"\r\n        },\r\n        \"birthInformation\": {\r\n          \"cityOfBirth\": \"ABC\",\r\n          \"countryOfBirth\": \"GB\",\r\n          \"dateOfBirth\": \"2001-01-01\"\r\n        },\r\n        \"identification\": [\r\n          {\r\n            \"idType\": \"Passport\",\r\n            \"identificationCountry\": \"GB\",\r\n            \"identificationNumber\": \"ABC123\",\r\n            \"validFromDate\": \"2001-01-01\",\r\n            \"validToDate\": \"2001-01-01\"\r\n          }\r\n        ]\r\n      },\r\n\t   \"additionalData\": [\r\n        {\r\n          \"Key\": \"NATIONAL_ID_CARD\",\r\n          \"Value\": \"TT6789CC\"\r\n        }\r\n      ]\r\n    },\r\n            \"description\": \"test\",\r\n            \"countryCode\": \"GB\",\r\n            \"bankAccountDetails\": [\r\n                {\r\n                    \"key\": \"accountName\",\r\n                    \"value\": \"Mr J Doe\"\r\n                },\r\n                {\r\n                    \"key\": \"accountNumber\",\r\n                    \"value\": \"01896660\"\r\n                },\r\n                {\r\n                    \"key\": \"bankName\",\r\n                    \"value\": \"Natwest\"\r\n                },\r\n                {\r\n                    \"key\": \"sortCode\",\r\n                    \"value\": 401118\r\n                }\r\n            ],\r\n        \"anticipatedPayoutRequestTime\": \"2018-10-14T23:00:00.000Z\",\r\n        \"payoutRequestCurrency\": \"GBP\",\r\n        \"serviceLevel\": \"standard\",\r\n        \"payerType\": \"user\",\r\n        \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1//bank-accounts/expected-settlement",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"",
+										"bank-accounts",
+										"expected-settlement"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Validate Beneficiary and get expected settlement (Legal Entity Identity)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n            \"beneficiaryIdentity\": {\r\n        \"legalEntityIdentity\": {\r\n        \"legalEntityName\": \"XYZ Corp\",\r\n        \"legalEntityRegistration\": {\r\n          \"legalEntityRegistrationCountry\": \"GB\",\r\n          \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n          \"legalEntityRegistrationProvince\": \"ABC\"\r\n        },\r\n        \"address\": {\r\n          \"addressLine1\": \"ABC\",\r\n          \"addressLine2\": \"ABC\",\r\n          \"addressLine3\": \"ABC\",\r\n          \"city\": \"ABC\",\r\n          \"country\": \"GB\",\r\n          \"postcode\": \"EC1A 4HY\",\r\n          \"province\": \"ABC\"\r\n        }\r\n      },\r\n      \"additionalData\": [\r\n        {\r\n          \"Key\": \"NATIONAL_ID_CARD\",\r\n          \"Value\": \"TT6789CC\"\r\n        }\r\n      ]\r\n    },\r\n            \"description\": \"test\",\r\n            \"countryCode\": \"GB\",\r\n            \"bankAccountDetails\": [\r\n                {\r\n                    \"key\": \"accountName\",\r\n                    \"value\": \"Mr J Doe\"\r\n                },\r\n                {\r\n                    \"key\": \"accountNumber\",\r\n                    \"value\": \"01896660\"\r\n                },\r\n                {\r\n                    \"key\": \"bankName\",\r\n                    \"value\": \"Natwest\"\r\n                },\r\n                {\r\n                    \"key\": \"sortCode\",\r\n                    \"value\": 401118\r\n                }\r\n            ],\r\n        \"anticipatedPayoutRequestTime\": \"2018-10-14T23:00:00.000Z\",\r\n        \"payoutRequestCurrency\": \"GBP\",\r\n        \"serviceLevel\": \"standard\",\r\n        \"payerType\": \"user\",\r\n        \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1//bank-accounts/expected-settlement",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"",
+										"bank-accounts",
+										"expected-settlement"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Validate Beneficiary and get expected settlement: Fail (unstructured Identity)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n            \"beneficiaryIdentity\": {\r\n      \"unstructuredIdentity\": [\r\n        {\r\n          \"Key\": \"Name\",\r\n          \"Value\": \"John Smith\"\r\n        }\r\n      ],\r\n      \"additionalData\": [\r\n        {\r\n          \"Key\": \"NATIONAL_ID_CARD\",\r\n          \"Value\": \"TT6789CC\"\r\n        }\r\n      ]\r\n    },\r\n            \"description\": \"test\",\r\n            \"countryCode\": \"GB\",\r\n            \"bankAccountDetails\": [\r\n                {\r\n                    \"key\": \"accountName\",\r\n                    \"value\": \"Mr J Doe\"\r\n                },\r\n                {\r\n                    \"key\": \"accountNumber\",\r\n                    \"value\": \"01896660\"\r\n                },\r\n                {\r\n                    \"key\": \"bankName\",\r\n                    \"value\": \"Natwest\"\r\n                },\r\n                {\r\n                    \"key\": \"sortCode\",\r\n                    \"value\": 401118\r\n                }\r\n            ],\r\n        \"anticipatedPayoutRequestTime\": \"2018-10-14T23:00:00.000Z\",\r\n        \"payoutRequestCurrency\": \"GBP\",\r\n        \"serviceLevel\": \"standard\",\r\n        \"payerType\": \"user\",\r\n        \"payerIdentity\": {\r\n      \"unstructuredIdentity\": [\r\n        {\r\n          \"Key\": \"Name\",\r\n          \"Value\": \"John Smith\"\r\n        }\r\n      ],\r\n      \"additionalData\": [\r\n        {\r\n          \"Key\": \"NATIONAL_ID_CARD\",\r\n          \"Value\": \"TT6789CC\"\r\n        }\r\n      ]\r\n    }\r\n    \r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1//bank-accounts/expected-settlement",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"",
+										"bank-accounts",
+										"expected-settlement"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -8306,13 +9394,13 @@
 			]
 		},
 		{
-			"name": "Settlement Calendar",
+			"name": "Settlement Calendars",
 			"item": [
 				{
-					"name": "Get Settlement Calander",
+					"name": "Get Settlement Calendars",
 					"item": [
 						{
-							"name": "GET Settlement Calander",
+							"name": "GET Settlement Calendars",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -8321,14 +9409,14 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/settlement-calendar?serviceLevel=standard&beneficiaryCountry=FR&beneficiaryCurrency=EUR&payoutRequestCurrency=GBP&numberOfCalendarDays=1",
+									"raw": "https://{{host}}/v1/settlement-calendars?serviceLevel=standard&beneficiaryCountry=FR&beneficiaryCurrency=EUR&payoutRequestCurrency=GBP&numberOfCalendarDays=1",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"v1",
-										"settlement-calendar"
+										"settlement-calendars"
 									],
 									"query": [
 										{
