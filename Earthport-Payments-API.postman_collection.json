@@ -7973,6 +7973,539 @@
 					"_postman_isSubFolder": true
 				},
 				{
+					"name": "Get Quotes [NEW]",
+					"item": [
+						{
+							"name": "exception cases",
+							"item": [
+								{
+									"name": "GET Quotes Fail: buyAmount buyCurrency",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "63827a8a-4dd4-4c7d-a20f-44925cefbf18",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains fxTicketID\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+													"    ",
+													"});",
+													"",
+													"",
+													"",
+													"",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090150650",
+												"bank-accounts",
+												"7429826",
+												"quotes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET Quotes Fail: sellAmount sellCurrency",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "f7d80502-4942-42ad-9fce-865d30a3e465",
+												"exec": [
+													"pm.test(\"Successful POST request\", function () {",
+													"    pm.response.to.be.ok;",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains fxTicketID\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+													"    ",
+													"});",
+													"",
+													"",
+													"",
+													"",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090150650",
+												"bank-accounts",
+												"7429826",
+												"quotes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET Quotes Fail:  buyAmount sellCurrency (Exchange in same currency)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "c28b9872-1613-4cff-9857-28092eb56869",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('Fx quote between same currencies is not allowed');",
+													"});",
+													"",
+													"",
+													"",
+													"",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090150650",
+												"bank-accounts",
+												"7429826",
+												"quotes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET Quotes Fail: sellAmount buyCurrency (Exchange in same currency)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "006f06ce-7e0d-4af1-b8aa-863c900de675",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('Fx quote between same currencies is not allowed');",
+													"});",
+													"",
+													"",
+													"",
+													"",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090150650",
+												"bank-accounts",
+												"7429826",
+												"quotes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET Quotes Fail: buyAmount sellCurrency (buyCurrency different than bank account currency)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "01895163-1522-4ee3-ac03-518ad93b251b",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('Buy currency specified must be same as beneficiary bank account currency');",
+													"});",
+													"",
+													"",
+													"",
+													"",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090150650",
+												"bank-accounts",
+												"7429826",
+												"quotes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "GET Quotes Fail: sellAmount buyCurrency (buyCurrency different than bank account currency)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "03b3c9f6-c273-45e6-b1d9-24f1077c718b",
+												"exec": [
+													"pm.test(\"Successful 400 Bad Request Error\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"",
+													"",
+													"pm.test(\"Response contains correct error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
+													"    ",
+													"    var jsonData = pm.response.json();",
+													"    var longMsg = jsonData.longMsg;",
+													"    ",
+													"    console.log('longMsg=='+longMsg);",
+													"    ",
+													"    pm.expect(longMsg).to.equal('Buy currency specified must be same as beneficiary bank account currency');",
+													"});",
+													"",
+													"",
+													"",
+													"",
+													"",
+													"//Clear down global variable",
+													"pm.globals.unset(\"current_time_in_ms\");"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
+										},
+										"url": {
+											"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+											"protocol": "https",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"v1",
+												"users",
+												"3430090150650",
+												"bank-accounts",
+												"7429826",
+												"quotes"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "GET Quotes sellAmount buyCurrency",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"    ",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes?",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090150650",
+										"bank-accounts",
+										"7429826",
+										"quotes"
+									],
+									"query": [
+										{
+											"key": "idType",
+											"value": "merchant",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Quotes buyAmount sellCurrency",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6b23a3bb-ebee-47fc-9958-99c6cb2ee393",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"    ",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3430090150650",
+										"bank-accounts",
+										"7429826",
+										"quotes"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{access_token}}",
+								"type": "string"
+							}
+						]
+					},
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Get Quotes",
 					"item": [
 						{
