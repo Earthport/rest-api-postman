@@ -280,18 +280,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -322,7 +321,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -336,7 +336,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"userID\": {\"merchantUserIDX\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+											"raw": "{\r\n  \"userID\": {\"merchantUserIDX\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users",
@@ -428,18 +428,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "51929099-4add-491c-9a72-79b19b30cefe",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -470,7 +469,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -484,7 +484,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users",
@@ -507,18 +507,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -549,7 +548,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -563,7 +563,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n     \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n     \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users",
@@ -586,18 +586,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "08e85961-5e58-46b9-9a9e-f542485c2a5c",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "b2c8f2cf-8894-44a8-b13b-57bd23fc076d",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -618,7 +617,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -632,7 +632,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"WRONG_KEY\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"WRONG_KEY\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users",
@@ -734,18 +734,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "64870af5-68e1-4245-b105-ff44f76796d1",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -776,7 +775,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -790,7 +790,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n         \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users",
@@ -813,18 +813,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -845,7 +844,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -859,7 +859,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+											"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
 											"raw": "https://{{host}}/v1/users",
@@ -879,24 +879,23 @@
 							"_postman_isSubFolder": true
 						},
 						{
-							"name": "Create User : Individual Identity",
+							"name": "Create User : Individual Identity (minimum data)",
 							"event": [
 								{
 									"listen": "prerequest",
 									"script": {
 										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -927,7 +926,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -941,7 +941,166 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"1 Main Street\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\"\r\n      }\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								},
+								"description": "AC"
+							},
+							"response": []
+						},
+						{
+							"name": "Create User : legal Entity Identity (minimum data)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\"\r\n      }\r\n    }\r\n  }\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User : Individual Identity",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchant User ID\", function () {",
+											"    var expected_merchant_user_id = \"userID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.merchantUserID).to.eql(expected_merchant_user_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated VAN\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epUserID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epUserID = jsonData.epUserID;",
+											"    ",
+											"    console.log('epUserID=='+epUserID);",
+											"    ",
+											"    //Earthport VAN is 13 digits and starts with 34",
+											"    var pattern = new RegExp(\"^(34)([0-9]{11})$\");",
+											"    var match = pattern.test(epUserID);",
+											"    ",
+											"    console.log('pattern.test(epUserID)=='+pattern.test(epUserID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"2 Main Street\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users",
@@ -965,18 +1124,17 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1007,7 +1165,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -1021,7 +1180,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+									"raw": "{\r\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\r\n  \"managedMerchantIdentity\": \"ABCCORP\",\r\n  \"accountCurrency\": \"any\",\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"London\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/users",
@@ -1063,18 +1222,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "64870af5-68e1-4245-b105-ff44f76796d1",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1105,7 +1263,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1122,7 +1281,7 @@
 											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n         \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1130,7 +1289,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1143,18 +1302,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1185,7 +1343,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1202,7 +1361,7 @@
 											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n     \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1210,7 +1369,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1223,18 +1382,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -1255,7 +1413,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1272,7 +1431,7 @@
 											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1280,7 +1439,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1293,18 +1452,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "551e6808-9f14-4ba5-a90d-5f56def55bd4",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "de0c8c27-edf9-410f-b404-262fa7bb88c7",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -1325,7 +1483,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1342,7 +1501,7 @@
 											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1350,7 +1509,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1363,18 +1522,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "51929099-4add-491c-9a72-79b19b30cefe",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1405,7 +1563,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1422,7 +1581,7 @@
 											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1430,7 +1589,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1443,18 +1602,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1485,7 +1643,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1502,7 +1661,7 @@
 											"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1510,7 +1669,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1593,18 +1752,17 @@
 											"listen": "prerequest",
 											"script": {
 												"id": "31077fcd-f4ec-4417-b52d-0436777ed989",
-												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-												]
+												],
+												"type": "text/javascript"
 											}
 										},
 										{
 											"listen": "test",
 											"script": {
 												"id": "69f8e00a-c525-4bf6-9fb9-95690b1d3783",
-												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1635,7 +1793,8 @@
 													"",
 													"//Clear down global variable",
 													"pm.globals.unset(\"current_time_in_ms\");"
-												]
+												],
+												"type": "text/javascript"
 											}
 										}
 									],
@@ -1652,7 +1811,7 @@
 											"raw": ""
 										},
 										"url": {
-											"raw": "https://{{host}}/v1/users/3430090152208",
+											"raw": "https://{{host}}/v1/users/3409890146942",
 											"protocol": "https",
 											"host": [
 												"{{host}}"
@@ -1660,7 +1819,7 @@
 											"path": [
 												"v1",
 												"users",
-												"3430090152208"
+												"3409890146942"
 											]
 										}
 									},
@@ -1676,18 +1835,17 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1718,7 +1876,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -1732,10 +1891,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"ABC\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2001-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+									"raw": "{\r\n  \"payerIdentity\": {\r\n    \"individualIdentity\": {\r\n      \"name\": {\r\n        \"familyName\": \"Smith\",\r\n        \"givenNames\": \"John\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"Birmingham\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      },\r\n      \"birthInformation\": {\r\n        \"cityOfBirth\": \"Manchester\",\r\n        \"countryOfBirth\": \"GB\",\r\n        \"dateOfBirth\": \"2001-01-01\"\r\n      },\r\n      \"identification\": [\r\n        {\r\n          \"idType\": \"Passport\",\r\n          \"identificationCountry\": \"GB\",\r\n          \"identificationNumber\": \"ABC123\",\r\n          \"validFromDate\": \"2001-01-01\",\r\n          \"validToDate\": \"2010-01-01\"\r\n        }\r\n      ]\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090152208",
+									"raw": "https://{{host}}/v1/users/3409890146942",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -1743,7 +1902,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090152208"
+										"3409890146942"
 									]
 								}
 							},
@@ -1756,18 +1915,17 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1798,7 +1956,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -1812,10 +1971,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"ABC\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
+									"raw": "{\r\n  \"payerIdentity\": {\r\n      \"legalEntityIdentity\": {\r\n      \"legalEntityName\": \"XYZ Corp\",\r\n      \"legalEntityRegistration\": {\r\n        \"legalEntityRegistrationCountry\": \"GB\",\r\n        \"legalEntityRegistrationNumber\": \"QWERTY54321\",\r\n        \"legalEntityRegistrationProvince\": \"ABC\"\r\n      },\r\n      \"address\": {\r\n        \"addressLine1\": \"ABC\",\r\n        \"addressLine2\": \"ABC\",\r\n        \"addressLine3\": \"ABC\",\r\n        \"city\": \"Birmingham\",\r\n        \"country\": \"GB\",\r\n        \"postcode\": \"EC1A 4HY\",\r\n        \"province\": \"ABC\"\r\n      }\r\n    },\r\n    \"additionalData\": [\r\n      {\r\n        \"Key\": \"NATIONAL_ID_CARD\",\r\n        \"Value\": \"TT6789CC\"\r\n      }\r\n    ]\r\n  }\r\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090152208",
+									"raw": "https://{{host}}/v1/users/3409890146942",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -1823,7 +1982,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090152208"
+										"3409890146942"
 									]
 								}
 							},
@@ -1845,7 +2004,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151111",
+									"raw": "https://{{host}}/v1/users/3409890146978",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -1853,7 +2012,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090151111"
+										"3409890146978"
 									]
 								}
 							},
@@ -1875,7 +2034,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090152222",
+									"raw": "https://{{host}}/v1/users/3409890146942",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -1883,7 +2042,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090152222"
+										"3409890146942"
 									]
 								}
 							},
@@ -1902,7 +2061,6 @@
 									"listen": "test",
 									"script": {
 										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1914,7 +2072,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -1928,10 +2087,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"depositReference\": \"44EPT1234549\"\r\n}\r\n"
+									"raw": "{\r\n    \"depositReference\": \"44ERA1234568\"\r\n}\r\n"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090155631/deposit-references",
+									"raw": "https://{{host}}/v1/users/3409890146942/deposit-references",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -1939,7 +2098,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090155631",
+										"3409890146942",
 										"deposit-references"
 									]
 								}
@@ -3645,18 +3804,17 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3708,7 +3866,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -3725,7 +3884,7 @@
 									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"FR\",\n          \"postcode\": \"123456\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"FR\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"FR\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"FR\",\n    \"currencyCode\": \"EUR\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"iban\",\n        \"value\": \"FR7630588600013765749018822\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      }\n    ]\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -3733,7 +3892,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090151617",
+										"3409890146942",
 										"bank-accounts"
 									]
 								}
@@ -3747,18 +3906,17 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3810,7 +3968,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -3827,7 +3986,7 @@
 									"raw": "{\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"US\",\n          \"postcode\": \"123456\",\n          \"province\": \"AZ\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"US\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"US\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"Key\": \"NATIONAL_ID_CARD\",\n          \"Value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"US\",\n    \"currencyCode\": \"USD\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"0210000893\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"sdsd\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"abaRoutingNumber\",\n        \"value\": \"081302633\"\n      },\n      {\n        \"key\": \"accountType\",\n        \"value\": \"1\"\n      }\n    ]\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -3835,7 +3994,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090151617",
+										"3409890146942",
 										"bank-accounts"
 									]
 								}
@@ -5447,7 +5606,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151590/bank-accounts/7432145",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -5455,9 +5614,9 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090151590",
+										"3409890146942",
 										"bank-accounts",
-										"7432145"
+										"4034215"
 									]
 								}
 							},
@@ -5854,18 +6013,17 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								},
 								{
 									"listen": "test",
 									"script": {
 										"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
-										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -5906,7 +6064,8 @@
 											"",
 											"//Clear down global variable",
 											"pm.globals.unset(\"current_time_in_ms\");"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -5923,7 +6082,7 @@
 									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"GBP\"\r\n\t},\r\n\t\"beneficiaryAmountInformation\": {\r\n\t\t\"beneficiaryAmount\": {\r\n\t\t\t\"amount\": 11,\r\n\t\t\t\"currency\": \"GBP\"\r\n\t\t},\r\n\t\t\"payoutCurrency\": \"GBP\"\r\n\t},\r\n\t\"serviceLevel\": \"standard\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"fxTicketID\": 0,\r\n\t\"requestedFX\": \"FF\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutType\": \"NA\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"K1\",\r\n\t\t\t\"value\": \"V1\"\r\n\t\t}, {\r\n\t\t\t\"key\": \"K2\",\r\n\t\t\t\"value\": \"V2\"\r\n\t\t}\r\n\t]\r\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090151617/bank-accounts/7431801/payments",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/7431801/payments",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -5931,7 +6090,7 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090151617",
+										"3409890146942",
 										"bank-accounts",
 										"7431801",
 										"payments"
@@ -5941,7 +6100,289 @@
 							"response": []
 						},
 						{
-							"name": "Post Payments: US/USD",
+							"name": "Post Payments: GB/GBP (minimum data)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchantTransactionID\", function () {",
+											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+											"    console.log('merchantTransactionID=='+merchantTransactionID);",
+											"",
+											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+											"    ",
+											"    console.log('epTransactionID=='+epTransactionID);",
+											"    ",
+											"    //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epTransactionID);",
+											"    ",
+											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"GBP\"\r\n\t},\r\n\t\"payerType\": \"user\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215/payments",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890146942",
+										"bank-accounts",
+										"4034215",
+										"payments"
+									]
+								},
+								"description": "This test assumes you have registered a GB/GBP beneficiary bank account with an Earthport bank ID = 4034215"
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payments: GB/GBP (minimum data & inline FX)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchantTransactionID\", function () {",
+											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+											"    console.log('merchantTransactionID=='+merchantTransactionID);",
+											"",
+											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+											"    ",
+											"    console.log('epTransactionID=='+epTransactionID);",
+											"    ",
+											"    //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epTransactionID);",
+											"    ",
+											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"EUR\"\r\n\t},\r\n\t\"payerType\": \"user\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215/payments",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890146942",
+										"bank-accounts",
+										"4034215",
+										"payments"
+									]
+								},
+								"description": "This test assumes you have registered a GB/GBP beneficiary bank account with an Earthport bank ID = 4034215. Not in the sample body that the currency of the payout request amount differs from the beneficiary bank account."
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payments: US/USD (requires purpose of payment)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "27686871-3211-45d2-8735-9e4b1403ab59",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchantTransactionID\", function () {",
+											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+											"    console.log('merchantTransactionID=='+merchantTransactionID);",
+											"",
+											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+											"    ",
+											"    console.log('epTransactionID=='+epTransactionID);",
+											"    ",
+											"    //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epTransactionID);",
+											"    ",
+											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"USD\"\r\n\t},\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"PURPOSE_OF_PAYMENT\",\r\n\t\t\t\"value\": \"REM\"\r\n\t\t}\r\n\t]\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034221/payments",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890146942",
+										"bank-accounts",
+										"4034221",
+										"payments"
+									]
+								},
+								"description": "This payment contains an example of how to set the purpose of payment."
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payments: AU/AUD",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -5957,7 +6398,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "27686871-3211-45d2-8735-9e4b1403ab59",
+										"id": "3894f424-9142-4cad-a1d5-c80571b29c44",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -6013,10 +6454,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"USD\"\r\n\t},\r\n\t\"beneficiaryAmountInformation\": {\r\n\t\t\"beneficiaryAmount\": {\r\n\t\t\t\"amount\": 11,\r\n\t\t\t\"currency\": \"USD\"\r\n\t\t},\r\n\t\t\"payoutCurrency\": \"USD\"\r\n\t},\r\n\t\"serviceLevel\": \"standard\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"fxTicketID\": 0,\r\n\t\"requestedFX\": \"FF\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutType\": \"NA\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"K1\",\r\n\t\t\t\"value\": \"V1\"\r\n\t\t}, {\r\n\t\t\t\"key\": \"K2\",\r\n\t\t\t\"value\": \"V2\"\r\n\t\t}\r\n\t],\r\n\t\"transactionHold\": {\r\n\t\t\"offsetMinutes\": 10\r\n\t}\r\n}"
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"AUD\"\r\n\t},\r\n\t\"beneficiaryAmountInformation\": {\r\n\t\t\"beneficiaryAmount\": {\r\n\t\t\t\"amount\": 11,\r\n\t\t\t\"currency\": \"AUD\"\r\n\t\t},\r\n\t\t\"payoutCurrency\": \"AUD\"\r\n\t},\r\n\t\"serviceLevel\": \"standard\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"fxTicketID\": 0,\r\n\t\"requestedFX\": \"FF\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutType\": \"NA\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"K1\",\r\n\t\t\t\"value\": \"V1\"\r\n\t\t}, {\r\n\t\t\t\"key\": \"K2\",\r\n\t\t\t\"value\": \"V2\"\r\n\t\t}\r\n\t],\r\n\t\"transactionHold\": {\r\n\t\t\"offsetMinutes\": 10\r\n\t}\r\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090148823/bank-accounts/7429306/payments",
+									"raw": "https://{{host}}/v1/users/3430090148823/bank-accounts/7429308/payments",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -6026,7 +6467,193 @@
 										"users",
 										"3430090148823",
 										"bank-accounts",
-										"7429306",
+										"7429308",
+										"payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payments: FR/EUR",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "4fb4fe67-c670-461f-a6a2-7196bb617599",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchantTransactionID\", function () {",
+											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+											"    console.log('merchantTransactionID=='+merchantTransactionID);",
+											"",
+											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+											"    ",
+											"    console.log('epTransactionID=='+epTransactionID);",
+											"    ",
+											"    //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epTransactionID);",
+											"    ",
+											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"EUR\"\r\n\t},\r\n\t\"beneficiaryAmountInformation\": {\r\n\t\t\"beneficiaryAmount\": {\r\n\t\t\t\"amount\": 11,\r\n\t\t\t\"currency\": \"EUR\"\r\n\t\t},\r\n\t\t\"payoutCurrency\": \"EUR\"\r\n\t},\r\n\t\"serviceLevel\": \"standard\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"fxTicketID\": 0,\r\n\t\"requestedFX\": \"FF\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutType\": \"NA\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"K1\",\r\n\t\t\t\"value\": \"V1\"\r\n\t\t}, {\r\n\t\t\t\"key\": \"K2\",\r\n\t\t\t\"value\": \"V2\"\r\n\t\t}\r\n\t],\r\n\t\"transactionHold\": {\r\n\t\t\"offsetMinutes\": 10\r\n\t}\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034220/payments",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890146942",
+										"bank-accounts",
+										"4034220",
+										"payments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Payments: FR/EUR (minimum data)",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "4fb4fe67-c670-461f-a6a2-7196bb617599",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchantTransactionID\", function () {",
+											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+											"    console.log('merchantTransactionID=='+merchantTransactionID);",
+											"",
+											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+											"    ",
+											"    console.log('epTransactionID=='+epTransactionID);",
+											"    ",
+											"    //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epTransactionID);",
+											"    ",
+											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"",
+											"",
+											"",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"EUR\"\r\n\t},\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"payerType\": \"user\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034220/payments",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890146942",
+										"bank-accounts",
+										"4034220",
 										"payments"
 									]
 								}
@@ -6230,99 +6857,6 @@
 							"response": []
 						},
 						{
-							"name": "Post Payments: AU/AUD",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "3894f424-9142-4cad-a1d5-c80571b29c44",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"pm.test(\"Response contains merchantTransactionID\", function () {",
-											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
-											"    var jsonData = pm.response.json();",
-											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
-											"    console.log('merchantTransactionID=='+merchantTransactionID);",
-											"",
-											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
-											"    ",
-											"    console.log('epTransactionID=='+epTransactionID);",
-											"    ",
-											"    //Earthport bank ID is numeric",
-											"    var pattern = new RegExp(\"^[0-9]*$\");",
-											"    var match = pattern.test(epTransactionID);",
-											"    ",
-											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
-											"    ",
-											"    pm.expect(match).to.be.true;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"AUD\"\r\n\t},\r\n\t\"beneficiaryAmountInformation\": {\r\n\t\t\"beneficiaryAmount\": {\r\n\t\t\t\"amount\": 11,\r\n\t\t\t\"currency\": \"AUD\"\r\n\t\t},\r\n\t\t\"payoutCurrency\": \"AUD\"\r\n\t},\r\n\t\"serviceLevel\": \"standard\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"fxTicketID\": 0,\r\n\t\"requestedFX\": \"FF\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutType\": \"NA\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"K1\",\r\n\t\t\t\"value\": \"V1\"\r\n\t\t}, {\r\n\t\t\t\"key\": \"K2\",\r\n\t\t\t\"value\": \"V2\"\r\n\t\t}\r\n\t],\r\n\t\"transactionHold\": {\r\n\t\t\"offsetMinutes\": 10\r\n\t}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/users/3430090148823/bank-accounts/7429308/payments",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										"3430090148823",
-										"bank-accounts",
-										"7429308",
-										"payments"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Post Payments: no beneficiaryAmountInformation",
 							"event": [
 								{
@@ -6409,99 +6943,6 @@
 										"3430090148263",
 										"bank-accounts",
 										"7426832",
-										"payments"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Post Payments: FR/EUR",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
-										"type": "text/javascript",
-										"exec": [
-											"var milliseconds = new Date().getTime();",
-											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "4fb4fe67-c670-461f-a6a2-7196bb617599",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"pm.test(\"Response contains merchantTransactionID\", function () {",
-											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
-											"    var jsonData = pm.response.json();",
-											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
-											"    console.log('merchantTransactionID=='+merchantTransactionID);",
-											"",
-											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
-											"    ",
-											"    var jsonData = pm.response.json();",
-											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
-											"    ",
-											"    console.log('epTransactionID=='+epTransactionID);",
-											"    ",
-											"    //Earthport bank ID is numeric",
-											"    var pattern = new RegExp(\"^[0-9]*$\");",
-											"    var match = pattern.test(epTransactionID);",
-											"    ",
-											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
-											"    ",
-											"    pm.expect(match).to.be.true;",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"amount\": 11,\r\n\t\t\"currency\": \"EUR\"\r\n\t},\r\n\t\"beneficiaryAmountInformation\": {\r\n\t\t\"beneficiaryAmount\": {\r\n\t\t\t\"amount\": 11,\r\n\t\t\t\"currency\": \"EUR\"\r\n\t\t},\r\n\t\t\"payoutCurrency\": \"EUR\"\r\n\t},\r\n\t\"serviceLevel\": \"standard\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\r\n\t\"fxTicketID\": 0,\r\n\t\"requestedFX\": \"FF\",\r\n\t\"payerType\": \"user\",\r\n\t\"payoutType\": \"NA\",\r\n\t\"payoutDetails\": [{\r\n\t\t\t\"key\": \"K1\",\r\n\t\t\t\"value\": \"V1\"\r\n\t\t}, {\r\n\t\t\t\"key\": \"K2\",\r\n\t\t\t\"value\": \"V2\"\r\n\t\t}\r\n\t],\r\n\t\"transactionHold\": {\r\n\t\t\"offsetMinutes\": 10\r\n\t}\r\n}"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/users/3430090148823/bank-accounts/7429307/payments",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"users",
-										"3430090148823",
-										"bank-accounts",
-										"7429307",
 										"payments"
 									]
 								}
@@ -6888,7 +7329,7 @@
 									"raw": "{\r\n\"getPayoutRequiredDataForCountryCurrency\":{\r\n      \"countryCode\": \"GB\",\r\n      \"currencyCode\": \"GBP\",\r\n      \"beneficiaryIdentityEntityType\": \"individual\",\r\n      \"serviceLevel\": \"standard\"\r\n    }\r\n}"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090148263/bank-accounts/7426832/payments/meta?amount=500&currency=EUR&payerType=user&serviceLevel=standard",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034221/payments/meta?amount=500&currency=USD&payerType=user&serviceLevel=standard",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -6896,9 +7337,9 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090148263",
+										"3409890146942",
 										"bank-accounts",
-										"7426832",
+										"4034221",
 										"payments",
 										"meta"
 									],
@@ -6909,7 +7350,7 @@
 										},
 										{
 											"key": "currency",
-											"value": "EUR"
+											"value": "USD"
 										},
 										{
 											"key": "payerType",
@@ -6920,7 +7361,8 @@
 											"value": "standard"
 										}
 									]
-								}
+								},
+								"description": "This returns information about valid purpose of payment codes."
 							},
 							"response": []
 						}
