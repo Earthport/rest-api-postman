@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f4703b18-f973-4749-b6d3-87763e3bf574",
-		"name": "Earthport-Payments-API",
+		"_postman_id": "804a8b65-d6b8-41ba-97fe-1a466003c6b4",
+		"name": "Earthport-Github-API",
 		"description": "This Postman collection contains sample requests for all of Earthport's Payment APIs.\n\nEach resource is split up into separate sub-folders. Each resource also contains samples of exception case requests. i.e. requests which will return various types of validation error.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -2029,10 +2029,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3409890146942",
 									"protocol": "https",
@@ -5643,10 +5639,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215",
 									"protocol": "https",
@@ -5707,10 +5699,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3409890147454/bank-accounts?",
 									"protocol": "https",
@@ -7159,10 +7147,6 @@
 												"value": "application/json"
 											}
 										],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/payments/meta?countryCode=AU&currencyCode=AUD&beneficiaryIdentityEntityType=individual&serviceLevel=standard",
 											"protocol": "https",
@@ -7209,10 +7193,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments/meta?countryCode=GB&currencyCode=GBP&beneficiaryIdentityEntityType=individual&serviceLevel=standard",
 									"protocol": "https",
@@ -7256,10 +7236,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments/meta?countryCode=FR&currencyCode=EUR&beneficiaryIdentityEntityType=individual&serviceLevel=standard",
 									"protocol": "https",
@@ -7303,10 +7279,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments/meta?countryCode=US&currencyCode=USD&beneficiaryIdentityEntityType=individual&serviceLevel=standard",
 									"protocol": "https",
@@ -7350,10 +7322,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments/meta?countryCode=IN&currencyCode=INR&beneficiaryIdentityEntityType=individual&serviceLevel=standard",
 									"protocol": "https",
@@ -7413,10 +7381,6 @@
 										"value": "application/json"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034221/payments/meta?amount=500&currency=USD&payerType=user&serviceLevel=standard",
 									"protocol": "https",
@@ -7474,10 +7438,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/balances?managedMerchantName=XYZ",
 											"protocol": "https",
@@ -7503,10 +7463,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/balances?currency=XYZ",
 											"protocol": "https",
@@ -7535,10 +7491,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/balances",
 									"protocol": "https",
@@ -7558,10 +7510,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/balances?currency=EUR",
 									"protocol": "https",
@@ -7587,10 +7535,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/balances?currency=USD",
 									"protocol": "https",
@@ -7616,10 +7560,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/balances?currency=GBP",
 									"protocol": "https",
@@ -7691,10 +7631,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/statements?managedMerchantName=test&startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=GBP&sortOrder=DESC",
 											"protocol": "https",
@@ -7736,10 +7672,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=XYZ&sortOrder=DESC",
 											"protocol": "https",
@@ -7777,10 +7709,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&sortOrder=DESC",
 											"protocol": "https",
@@ -7822,10 +7750,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=INR&sortOrder=DESC",
 									"protocol": "https",
@@ -7863,10 +7787,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=GBP&sortOrder=DESC&offset=2&pageSize=10",
 									"protocol": "https",
@@ -7912,10 +7832,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=GBP&sortOrder=DESC&offset=2&pageSize=3",
 									"protocol": "https",
@@ -7961,10 +7877,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=USD&sortOrder=DESC",
 									"protocol": "https",
@@ -8002,10 +7914,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=EUR&sortOrder=DESC",
 									"protocol": "https",
@@ -8043,10 +7951,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/statements?startDateTime=2018-01-01T00:00:47Z&endDateTime=2018-10-01T00:00:47Z&currency=GBP&sortOrder=DESC&offset=2&pageSize=3",
 									"protocol": "https",
@@ -8504,7 +8408,7 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Get Quotes [NEW]",
+					"name": "Get Quotes",
 					"item": [
 						{
 							"name": "exception cases",
@@ -8939,7 +8843,7 @@
 									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes?",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215/quotes",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -8947,9 +8851,9 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090150650",
+										"3409890146942",
 										"bank-accounts",
-										"7429826",
+										"4034215",
 										"quotes"
 									],
 									"query": [
@@ -9006,7 +8910,7 @@
 									"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3430090150650/bank-accounts/7429826/quotes",
+									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215/quotes",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -9014,503 +8918,9 @@
 									"path": [
 										"v1",
 										"users",
-										"3430090150650",
+										"3409890146942",
 										"bank-accounts",
-										"7429826",
-										"quotes"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{access_token}}",
-								"type": "string"
-							}
-						]
-					},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Get Quotes",
-					"item": [
-						{
-							"name": "exception cases",
-							"item": [
-								{
-									"name": "GET Quotes Fail: sellAmount buyCurrency (buyCurrency different than bank account currency)",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "03b3c9f6-c273-45e6-b1d9-24f1077c718b",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful 400 Bad Request Error\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains correct error message\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
-													"    ",
-													"    var jsonData = pm.response.json();",
-													"    var longMsg = jsonData.longMsg;",
-													"    ",
-													"    console.log('longMsg=='+longMsg);",
-													"    ",
-													"    pm.expect(longMsg).to.equal('Buy currency specified must be same as beneficiary bank account currency');",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/quotes",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"quotes"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET Quotes Fail: buyAmount sellCurrency (buyCurrency different than bank account currency)",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "01895163-1522-4ee3-ac03-518ad93b251b",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful 400 Bad Request Error\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains correct error message\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
-													"    ",
-													"    var jsonData = pm.response.json();",
-													"    var longMsg = jsonData.longMsg;",
-													"    ",
-													"    console.log('longMsg=='+longMsg);",
-													"    ",
-													"    pm.expect(longMsg).to.equal('Buy currency specified must be same as beneficiary bank account currency');",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/quotes",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"quotes"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET Quotes Fail: buyAmount buyCurrency",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "63827a8a-4dd4-4c7d-a20f-44925cefbf18",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful POST request\", function () {",
-													"    pm.response.to.be.ok;",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains fxTicketID\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
-													"    ",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/quotes",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"quotes"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET Quotes Fail: sellAmount sellCurrency",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "f7d80502-4942-42ad-9fce-865d30a3e465",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful POST request\", function () {",
-													"    pm.response.to.be.ok;",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains fxTicketID\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
-													"    ",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/quotes",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"quotes"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET Quotes Fail: sellAmount buyCurrency (Exchange in same currency)",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "006f06ce-7e0d-4af1-b8aa-863c900de675",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful 400 Bad Request Error\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains correct error message\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
-													"    ",
-													"    var jsonData = pm.response.json();",
-													"    var longMsg = jsonData.longMsg;",
-													"    ",
-													"    console.log('longMsg=='+longMsg);",
-													"    ",
-													"    pm.expect(longMsg).to.equal('Fx quote between same currencies is not allowed');",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/quotes",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"quotes"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "GET Quotes Fail:  buyAmount sellCurrency (Exchange in same currency)",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "c28b9872-1613-4cff-9857-28092eb56869",
-												"type": "text/javascript",
-												"exec": [
-													"pm.test(\"Successful 400 Bad Request Error\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
-													"",
-													"",
-													"",
-													"pm.test(\"Response contains correct error message\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"longMsg\");",
-													"    ",
-													"    var jsonData = pm.response.json();",
-													"    var longMsg = jsonData.longMsg;",
-													"    ",
-													"    console.log('longMsg=='+longMsg);",
-													"    ",
-													"    pm.expect(longMsg).to.equal('Fx quote between same currencies is not allowed');",
-													"});",
-													"",
-													"",
-													"",
-													"",
-													"",
-													"//Clear down global variable",
-													"pm.globals.unset(\"current_time_in_ms\");"
-												]
-											}
-										}
-									],
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-										},
-										"url": {
-											"raw": "https://{{host}}/v1/quotes",
-											"protocol": "https",
-											"host": [
-												"{{host}}"
-											],
-											"path": [
-												"v1",
-												"quotes"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "GET Quotes sellAmount buyCurrency",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains fxTicketID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
-											"    ",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/quotes",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
-										"quotes"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GET Quotes buyAmount sellCurrency",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "6b23a3bb-ebee-47fc-9958-99c6cb2ee393",
-										"type": "text/javascript",
-										"exec": [
-											"pm.test(\"Successful POST request\", function () {",
-											"    pm.response.to.be.ok;",
-											"});",
-											"",
-											"",
-											"",
-											"pm.test(\"Response contains fxTicketID\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
-											"    ",
-											"});",
-											"",
-											"",
-											"",
-											"",
-											"",
-											"//Clear down global variable",
-											"pm.globals.unset(\"current_time_in_ms\");"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\",\n        \"usersBankID\": {\n            \"userID\": {\n                \"epUserID\": \"3430090150650\"\n            },\n            \"benBankID\": {\n                \"epBankID\": \"7429826\"\n            }\n        }\n}\n"
-								},
-								"url": {
-									"raw": "https://{{host}}/v1/quotes",
-									"protocol": "https",
-									"host": [
-										"{{host}}"
-									],
-									"path": [
-										"v1",
+										"4034215",
 										"quotes"
 									]
 								}
@@ -9809,10 +9219,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984607095",
 									"protocol": "https",
@@ -9833,10 +9239,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984546394",
 									"protocol": "https",
@@ -9857,10 +9259,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984548632",
 									"protocol": "https",
@@ -9881,10 +9279,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984545951",
 									"protocol": "https",
@@ -9905,10 +9299,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984607202",
 									"protocol": "https",
@@ -9929,10 +9319,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984548614",
 									"protocol": "https",
@@ -9953,10 +9339,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions/281474984548618",
 									"protocol": "https",
@@ -10054,10 +9436,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": ""
-										},
 										"url": {
 											"raw": "https://{{host}}/v1/transactions?managedMerchantName=123&currency=GBP&startDateTime=2018-01-01T07:36:28&endDateTime=2018-08-01T07:36:28&amountFrom=0&amountTo=50&sortOrder=DESC&sortFields=Timestamp,Amount&merchantTransactionID=txID_1532520105368&transactionType=Payout",
 											"protocol": "https",
@@ -10137,10 +9515,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions?currency=GBP&startDateTime=2018-12-01T07:36:28&endDateTime=2018-12-07T07:36:28&amountFrom=0&amountTo=5000&sortOrder=DESC&sortFields=Timestamp,Amount",
 									"protocol": "https",
@@ -10220,10 +9594,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/transactions?currency=GBP&startDateTime=2018-01-01T07:36:28&endDateTime=2018-08-01T07:36:28&amountFrom=0&amountTo=50&sortOrder=DESC&sortFields=Timestamp,Amount&merchantTransactionID=txID_1532520105368&transactionType=Payout&offset=0&pageSize=5",
 									"protocol": "https",
@@ -10300,369 +9670,6 @@
 			]
 		},
 		{
-			"name": "Notifications",
-			"item": [
-				{
-					"name": "Sample DEPOSIT Notification",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"type": "text/javascript",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								]
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/xml"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ns1:notification xmlns=\"http://customer.endpoint.earthport.com/api/merchant/v1/components/notificationBase\"\r\n xmlns:ns1=\"http://customer.endpoint.earthport.com/api/merchant/v3/notification\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"DepositNotificationType\">\r\n <notificationType>DEPOSIT</notificationType>\r\n <epUserID>3430090154193</epUserID>\r\n <merchantUserIdentity>cptt001</merchantUserIdentity>\r\n <epTransactionID>281474990733677</epTransactionID>\r\n <timestamp>2015-02-03T09:34:43.193+00:00</timestamp>\r\n <managedMerchantIdentity>Contracting Merchant User</managedMerchantIdentity>\r\n <depositAmount>\r\n   <ns2:currency xmlns:ns2=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">EUR</ns2:currency>\r\n   <ns3:amount xmlns:ns3=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">12.50</ns3:amount>\r\n </depositAmount>\r\n <depositedAmount>\r\n   <ns4:currency xmlns:ns4=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">GBP</ns4:currency>\r\n   <ns5:amount xmlns:ns5=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">10.26</ns5:amount>\r\n </depositedAmount>\r\n</ns1:notification>"
-						},
-						"url": {
-							"raw": "http://{{host}}/notification/companies/neosalpha/apps/neosalpha-payment",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"notification",
-								"companies",
-								"neosalpha",
-								"apps",
-								"neosalpha-payment"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sample FUNDING Notification",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/xml"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<ns1:notification\r\n  xmlns=\"http://customer.endpoint.earthport.com/api/merchant/v1/components/notificationBase\"\r\n  xmlns:ns1=\"http://customer.endpoint.earthport.com/api/merchant/v3/notification\"\r\n  xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"FundingNotificationType\">\r\n  <notificationType>FUNDING</notificationType>\r\n  <epUserID>3430090146574</epUserID>\r\n  <merchantUserIdentity>Central_EarthportPaymentTest</merchantUserIdentity>\r\n  <epTransactionID>281474984542458</epTransactionID>\r\n  <timestamp>2018-10-16T15:04:16.140+00:00</timestamp>\r\n  <depositAmount>\r\n    <ns2:currency xmlns:ns2=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">GBP</ns2:currency>\r\n    <ns3:amount xmlns:ns3=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">88888.00</ns3:amount>\r\n  </depositAmount>\r\n  <transactionDetails>kklkj8888</transactionDetails>\r\n</ns1:notification>"
-						},
-						"url": {
-							"raw": "https://{{host}}/notification/companies/bank-of-america/apps/payments",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"notification",
-								"companies",
-								"bank-of-america",
-								"apps",
-								"payments"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sample PAYMENT SENT Notification",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"type": "text/javascript",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								]
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/xml"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<ns1:notification xsi:type=\"PaymentSentNotificationType\" xmlns=\"http://customer.endpoint.earthport.com/api/merchant/v1/components/notificationBase\" xmlns:ns1=\"http://customer.endpoint.earthport.com/api/merchant/v3/notification\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n               <notificationType>PAYMENT_SENT</notificationType>\r\n               <epUserID>3430090240848</epUserID>\r\n               <merchantUserIdentity>1DBWSBQ1EPF78</merchantUserIdentity>\r\n               <epTransactionID>281475041370930</epTransactionID>\r\n               <timestamp>2018-05-25T15:48:58.788+01:00</timestamp>\r\n               <managedMerchantIdentity>Contracting Merchant User</managedMerchantIdentity>\r\n               <payoutTransactionID>\r\n                              <epTransactionID>281475041370930</epTransactionID>                              <merchantTransactionID>IntegrationTest:62537498</merchantTransactionID>\r\n               </payoutTransactionID>\r\n               <payoutRequestAmount>\r\n                              <ns2:currency xmlns:ns2=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">GBP</ns2:currency>\r\n                              <ns3:amount xmlns:ns3=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">145.32</ns3:amount>\r\n               </payoutRequestAmount>\r\n               <epBankID>21068999</epBankID>\r\n</ns1:notification>"
-						},
-						"url": {
-							"raw": "http://{{host}}/notification/companies/actest/apps/actest-system",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"notification",
-								"companies",
-								"actest",
-								"apps",
-								"actest-system"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sample REJECTED PAYOUT Notification",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"type": "text/javascript",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								]
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/xml"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<ns1:notification xmlns=\"http://customer.endpoint.earthport.com/api/merchant/v1/components/notificationBase\"\r\n xmlns:ns1=\"http://customer.endpoint.earthport.com/api/merchant/v3/notification\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"RejectNotificationType\">\r\n <notificationType>REJECTED_PAYOUT</notificationType>\r\n <epUserID>3430090154301</epUserID>\r\n <merchantUserIdentity>119TUOC87NPCK</merchantUserIdentity>\r\n <epTransactionID>281474990733689</epTransactionID>\r\n <timestamp>2015-02-03T18:22:07.211+00:00</timestamp>\r\n <managedMerchantIdentity>Contracting Merchant User</managedMerchantIdentity>\r\n <refundedAmount>\r\n   <ns2:currency xmlns:ns2=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">GBP</ns2:currency>\r\n   <ns3:amount xmlns:ns3=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">100.00</ns3:amount>\r\n </refundedAmount>\r\n <payoutAmount>\r\n   <ns4:currency xmlns:ns4=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">GBP</ns4:currency>\r\n   <ns5:amount xmlns:ns5=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">100.00</ns5:amount>\r\n </payoutAmount>\r\n <payoutTransactionID>\r\n   <epTransactionID>281474990732857</epTransactionID>   <merchantTransactionID>IntegrationTest:11903175</merchantTransactionID>\r\n </payoutTransactionID>\r\n <epBankID>9670429</epBankID>\r\n <reason> Account Address invalid . BE04</reason>\r\n <reasonID>101</reasonID>\r\n</ns1:notification>"
-						},
-						"url": {
-							"raw": "http://{{host}}/notification/companies/actest/apps/actest-system",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"notification",
-								"companies",
-								"actest",
-								"apps",
-								"actest-system"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sample REFUND Notification",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"type": "text/javascript",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								]
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/xml"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "<ns1:notification xmlns=\"http://customer.endpoint.earthport.com/api/merchant/v1/components/notificationBase\"\r\n xmlns:ns1=\"http://customer.endpoint.earthport.com/api/merchant/v3/notification\"\r\n xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ReturnNotificationType\">\r\n <notificationType>REFUND</notificationType>\r\n <epUserID>3430090154193</epUserID>\r\n <merchantUserIdentity>cptt001</merchantUserIdentity>\r\n <epTransactionID>281474990733696</epTransactionID>\r\n <timestamp>2015-02-03T18:35:13.485+00:00</timestamp>\r\n <managedMerchantIdentity>Contracting Merchant User</managedMerchantIdentity>\r\n <refundedAmount>\r\n   <ns2:currency xmlns:ns2=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">EUR</ns2:currency>\r\n   <ns3:amount xmlns:ns3=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">58.32</ns3:amount>\r\n </refundedAmount>\r\n <payoutAmount>\r\n   <ns4:currency xmlns:ns4=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">EUR</ns4:currency>\r\n   <ns5:amount xmlns:ns5=\"http://customer.endpoint.earthport.com/api/merchant/v2/components/core\">60.15</ns5:amount>\r\n </payoutAmount>\r\n <payoutTransactionID>\r\n   <epTransactionID>281474990733691</epTransactionID>\r\n   <merchantTransactionID>ccttfx01g</merchantTransactionID>\r\n </payoutTransactionID>\r\n <epBankID>9670420</epBankID>\r\n <reason> Account Address invalid . BE04</reason>\r\n <reasonID>111</reasonID>\r\n</ns1:notification>"
-						},
-						"url": {
-							"raw": "http://{{host}}/notification/companies/actest/apps/actest-system",
-							"protocol": "http",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"notification",
-								"companies",
-								"actest",
-								"apps",
-								"actest-system"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST Notification Test",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"type": "text/javascript",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								]
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "notification-type",
-									"value": "REFUND",
-									"type": "text"
-								},
-								{
-									"key": "company",
-									"value": "bank-of-america",
-									"type": "text"
-								},
-								{
-									"key": "app",
-									"value": "payments",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "https://{{host}}/notification/test",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"notification",
-								"test"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "POST Notification Simulate",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-								"type": "text/javascript",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								]
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/x-www-form-urlencoded"
-							}
-						],
-						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
-								{
-									"key": "notification-type",
-									"value": "REFUND",
-									"type": "text"
-								},
-								{
-									"key": "url",
-									"value": "https://webhook.site/3340f7bf-7bd0-468c-9ae2-832df9bc0e96",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "https://{{host}}/v1/notification/simulate",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"v1",
-								"notification",
-								"simulate"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Settlement Calendars",
 			"item": [
 				{
@@ -10673,10 +9680,6 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "https://{{host}}/v1/settlement-calendars?serviceLevel=standard&beneficiaryCountry=FR&beneficiaryCurrency=EUR&payoutRequestCurrency=GBP&numberOfCalendarDays=1",
 									"protocol": "https",
