@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "804a8b65-d6b8-41ba-97fe-1a466003c6b4",
+		"_postman_id": "af663bf7-47b7-454c-9115-6b1ec20fbc55",
 		"name": "Earthport-Github-API",
 		"description": "This Postman collection contains sample requests for all of Earthport's Payment APIs.\n\nEach resource is split up into separate sub-folders. Each resource also contains samples of exception case requests. i.e. requests which will return various types of validation error.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -7002,11 +7002,11 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -7020,7 +7020,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\n  \"accountCurrency\": \"any\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"key\": \"NATIONAL_ID_CARD\",\n        \"value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"key\": \"NATIONAL_ID_CARD\",\n          \"value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
+									"raw": "{\n\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_{{current_time_in_ms}}\"},\n  \"accountCurrency\": \"any\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"key\": \"NATIONAL_ID_CARD\",\n        \"value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\":{ \"merchantBankID\": \"bankID_{{current_time_in_ms}}\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"key\": \"NATIONAL_ID_CARD\",\n          \"value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments",
@@ -7084,11 +7084,11 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
-										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -7102,7 +7102,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_1530273846030\"},\n  \"accountCurrency\": \"any\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"key\": \"NATIONAL_ID_CARD\",\n        \"value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\": {\"merchantBankID\": \"bankID_1530273906017\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"key\": \"NATIONAL_ID_CARD\",\n          \"value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\n\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 11,\n\t\t\"currency\": \"GBP\"\n\t},\n\t\"beneficiaryAmountInformation\": {\n\t\t\"beneficiaryAmount\": {\n\t\t\t\"amount\": 11,\n\t\t\t\"currency\": \"GBP\"\n\t\t},\n\t\t\"payoutCurrency\": \"GBP\"\n\t},\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
+									"raw": "{\n\"user\":{\n  \"userID\": {\"merchantUserID\": \"userID_1562841763897\"},\n  \"accountCurrency\": \"any\",\n  \"payerIdentity\": {\n    \"individualIdentity\": {\n      \"name\": {\n        \"familyName\": \"Smith\",\n        \"givenNames\": \"John\"\n      },\n      \"address\": {\n        \"addressLine1\": \"ABC\",\n        \"addressLine2\": \"ABC\",\n        \"addressLine3\": \"ABC\",\n        \"city\": \"ABC\",\n        \"country\": \"GB\",\n        \"postcode\": \"EC1A 4HY\",\n        \"province\": \"ABC\"\n      },\n      \"birthInformation\": {\n        \"cityOfBirth\": \"ABC\",\n        \"countryOfBirth\": \"GB\",\n        \"dateOfBirth\": \"2001-01-01\"\n      },\n      \"identification\": [\n        {\n          \"idType\": \"Passport\",\n          \"identificationCountry\": \"GB\",\n          \"identificationNumber\": \"ABC123\",\n          \"validFromDate\": \"2001-01-01\",\n          \"validToDate\": \"2001-01-01\"\n        }\n      ]\n    },\n    \"additionalData\": [\n      {\n        \"key\": \"NATIONAL_ID_CARD\",\n        \"value\": \"TT6789CC\"\n      }\n    ]\n  }\n},\n\n\"bankAccount\": {\n  \"benBankID\": {\"merchantBankID\": \"bankID_1562841793003\"},\n    \"beneficiaryIdentity\": {\n      \"individualIdentity\": {\n        \"name\": {\n          \"familyName\": \"Smith\",\n          \"givenNames\": \"John\"\n        },\n        \"address\": {\n          \"addressLine1\": \"ABC\",\n          \"addressLine2\": \"ABC\",\n          \"addressLine3\": \"ABC\",\n          \"city\": \"ABC\",\n          \"country\": \"GB\",\n          \"postcode\": \"EC1A 4HY\",\n          \"province\": \"ABC\"\n        },\n        \"birthInformation\": {\n          \"cityOfBirth\": \"ABC\",\n          \"countryOfBirth\": \"GB\",\n          \"dateOfBirth\": \"2001-01-01\"\n        },\n        \"identification\": [\n          {\n            \"idType\": \"Passport\",\n            \"identificationCountry\": \"GB\",\n            \"identificationNumber\": \"ABC123\",\n            \"validFromDate\": \"2001-01-01\",\n            \"validToDate\": \"2001-01-01\"\n          }\n        ]\n      },\n\t   \"additionalData\": [\n        {\n          \"key\": \"NATIONAL_ID_CARD\",\n          \"value\": \"TT6789CC\"\n        }\n      ]\n    },\n    \"description\": \"Bank Account Description\",\n    \"countryCode\": \"GB\",\n    \"currencyCode\": \"GBP\",\n    \"bankAccountDetails\": [\n      {\n        \"key\": \"accountNumber\",\n        \"value\": \"06970093\"\n      },\n      {\n        \"key\": \"accountName\",\n        \"value\": \"account name\"\n      },\n      {\n        \"key\": \"bankName\",\n        \"value\": \"Test Bank\"\n      },\n      {\n        \"key\": \"sortCode\",\n        \"value\": \"800554\"\n      }\n    ]\n\n},\n\"payment\": {\n\t\"transactionID\": {\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\n\t},\n\t\"payoutRequestAmount\": {\n\t\t\"amount\": 12.61,\n\t\t\"currency\": \"EUR\"\n\t},\n\t\"fxTicketID\": 665020,\n\t\"serviceLevel\": \"standard\",\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\",\n\t\"payerType\": \"user\",\n\t\"payoutType\": \"NA\",\n\t\"payoutDetails\": [{\n\t\t\t\"key\": \"K1\",\n\t\t\t\"value\": \"V1\"\n\t\t}, {\n\t\t\t\"key\": \"K2\",\n\t\t\t\"value\": \"V2\"\n\t\t}\n\t]\n}\n}"
 								},
 								"url": {
 									"raw": "https://{{host}}/v1/payments",
@@ -8840,10 +8840,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
+									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1200\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3409890146942/bank-accounts/4034215/quotes",
+									"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -8851,9 +8851,9 @@
 									"path": [
 										"v1",
 										"users",
-										"3409890146942",
+										"3409890151126",
 										"bank-accounts",
-										"4034215",
+										"4138896",
 										"quotes"
 									],
 									"query": [
@@ -9750,6 +9750,264 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "Quotes [example] ",
+			"item": [
+				{
+					"name": "GET FX Quote [sellAmount]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.response.to.be.ok;",
+									"});",
+									"",
+									"bodyData = JSON.parse(responseBody);",
+									"",
+									"//store fxTicketID data",
+									"fxTicketID = bodyData.fxTicketID;",
+									"",
+									"//store sellAmount data",
+									"sellAmount = bodyData.fxDetail.sellAmount;",
+									"currency = sellAmount.currency,",
+									"amount = sellAmount.amount;",
+									"",
+									"pm.test(\"Response contains fxTicketID\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+									"});",
+									"",
+									"//set variables",
+									"pm.environment.set(\"fxTicketID\", fxTicketID);",
+									"pm.environment.set(\"sellCurrency\", currency);",
+									"pm.environment.set(\"sellAmount\", amount);",
+									"",
+									"//Clear down global variable",
+									"pm.globals.unset(\"current_time_in_ms\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
+						},
+						"url": {
+							"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"3409890151126",
+								"bank-accounts",
+								"4138896",
+								"quotes"
+							],
+							"query": [
+								{
+									"key": "idType",
+									"value": "merchant",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET FX Quote [buyAmount]",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6b23a3bb-ebee-47fc-9958-99c6cb2ee393",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.response.to.be.ok;",
+									"});",
+									"",
+									"bodyData = JSON.parse(responseBody);",
+									"",
+									"//store fxTicketID data",
+									"fxTicketID = bodyData.fxTicketID;",
+									"",
+									"//store sellAmount data",
+									"sellAmount = bodyData.fxDetail.sellAmount;",
+									"currency = sellAmount.currency,",
+									"amount = sellAmount.amount;",
+									"",
+									"pm.test(\"Response contains fxTicketID\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+									"});",
+									"",
+									"//set variables",
+									"pm.environment.set(\"fxTicketID\", fxTicketID);",
+									"pm.environment.set(\"sellCurrency\", currency);",
+									"pm.environment.set(\"sellAmount\", amount);",
+									"",
+									"//Clear down global variable",
+									"pm.globals.unset(\"current_time_in_ms\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
+						},
+						"url": {
+							"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"3409890151126",
+								"bank-accounts",
+								"4138896",
+								"quotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Payments w/ FX Quote",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+								"exec": [
+									"var milliseconds = new Date().getTime();",
+									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.response.to.be.ok;",
+									"});",
+									"",
+									"pm.test(\"Response contains merchantTransactionID\", function () {",
+									"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+									"    var jsonData = pm.response.json();",
+									"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+									"    console.log('merchantTransactionID=='+merchantTransactionID);",
+									"",
+									"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+									"});",
+									"",
+									"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+									"    ",
+									"    var jsonData = pm.response.json();",
+									"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+									"    ",
+									"    console.log('epTransactionID=='+epTransactionID);",
+									"    ",
+									"    //Earthport bank ID is numeric",
+									"    var pattern = new RegExp(\"^[0-9]*$\");",
+									"    var match = pattern.test(epTransactionID);",
+									"    ",
+									"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+									"    ",
+									"    pm.expect(match).to.be.true;",
+									"});",
+									"",
+									"//Clear down global variable",
+									"pm.globals.unset(\"current_time_in_ms\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"currency\": \"{{sellCurrency}}\",\r\n\t\t\"amount\": {{sellAmount}}\r\n\t},\r\n\t\"fxTicketID\": {{fxTicketID}},\r\n\t\"payerType\": \"user\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/payments",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"users",
+								"3409890151126",
+								"bank-accounts",
+								"4138896",
+								"payments"
+							]
+						},
+						"description": "This test assumes you have registered a GB/GBP beneficiary bank account with an Earthport bank ID = 4034215. Not in the sample body that the currency of the payout request amount differs from the beneficiary bank account."
+					},
+					"response": []
+				}
+			],
+			"description": "### Summary\n\nHere we've provided an example 'Quotes' collection that was put together as a visual aid, with the primary purpose of showing how payments are made using an FX ticketID - which was provided by a sell amount or buy amount quote. This should demonstrate the procedure of requesting a quote, to obtaining a FX ticketID, as well as the data that needs to be passed into the payment request body. \n\n\n### Getting Started\n\nNote: Please make sure you have Authenticated first. \n\n1. Start by selecting either 'sellAmount' or 'buyAmount', you can leave it how it is or you can input any amount of your choosing. You can change the currency code for the 'sellCurrency' if you wish, however the currency code must be GBP for 'buyCurrency' in order for this to work. This is because the sample bankID supplied within the URL is a beneficiary bank account that has been created for an GBP account. Should you choose to change the bankID to one you've created then the 'buyCurrency' will also need to change to the currency code of that bank account. \n\n2. Once you've sent the request, then 'ticketID', 'sellCurrency' and 'sellAmount' will be passed as a variable into the Payments request body. Open the 'Post Payments with FX' and send that request. This should automatically fill in the required fields for making payments using a ticketID. If you dive into the body for 'Post Payments' you'll see for example: {{fxTicketID}} , this is retrieving mandatory information from the quote request earlier.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "76321ae7-370d-49cb-b1ed-5c9fc7515ffc",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a2c61347-d73d-45c5-a706-aff636ab46c6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		}
