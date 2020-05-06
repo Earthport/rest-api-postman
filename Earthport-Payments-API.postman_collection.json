@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f8fa2a48-1c9a-4ba0-8fb0-a057d92be6b1",
+		"_postman_id": "0b548a5a-25d6-4865-b4d1-7e056af3a92d",
 		"name": "Earthport-Github-API",
 		"description": "This Postman collection contains sample requests for all of Earthport's Payment APIs.\n\nEach resource is split up into separate sub-folders. Each resource also contains samples of exception case requests. i.e. requests which will return various types of validation error.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -18,7 +18,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f2334114-e0f7-4723-ab12-2ee12d2ef1ff",
+										"id": "9d51fd9a-f00a-440f-ae79-9ddc7e55257d",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful 401 Unauthorized Error\", function () {",
@@ -94,7 +94,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "aaf01671-ecc0-4d49-acd3-7e32d762dc00",
+										"id": "01404c9b-5a16-473f-be2c-0b0f13d3eac1",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -175,7 +175,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "45056f4e-f3e9-46c1-bc14-2ebd997bc5a4",
+								"id": "1929aa46-1009-4a14-9df3-5d46fc4485f2",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Successful POST request\", function () {",
@@ -246,7 +246,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "11421806-dd27-435c-978c-70f976aa8256",
+						"id": "dac0edea-c7e7-46a3-a5be-ab6eab08ce69",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -256,7 +256,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b107957c-8593-49a1-b5c0-6b94e8a92c82",
+						"id": "ef2318b1-e487-42c8-9532-4f10b28d9053",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -281,7 +281,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
+												"id": "bcdb91dd-e673-42a3-99b9-65a3a7e0ed24",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -292,7 +292,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
+												"id": "d0903834-b1c7-4dcf-9fd1-03778e019c66",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -360,7 +360,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "551e6808-9f14-4ba5-a90d-5f56def55bd4",
+												"id": "1b750885-e737-4e0f-a5c0-3bf6a019a8af",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -371,7 +371,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "de0c8c27-edf9-410f-b404-262fa7bb88c7",
+												"id": "d99ee98c-0d0d-4533-83b2-fa1481f3dcc1",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -429,7 +429,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
+												"id": "4d82cd47-05e7-4ec5-95f7-7667d659ae23",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -440,7 +440,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "51929099-4add-491c-9a72-79b19b30cefe",
+												"id": "3df4a5d3-ff9b-4933-96c0-bf4cd2aaaaaf",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -508,7 +508,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
+												"id": "211deb61-fd54-4e0c-bfe0-ab0ef177990c",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -519,7 +519,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
+												"id": "57863932-a6eb-4960-9344-e5e6917a33cb",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -587,7 +587,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "08e85961-5e58-46b9-9a9e-f542485c2a5c",
+												"id": "d930446b-6e10-40d3-b22a-0852baa47f2e",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -598,7 +598,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b2c8f2cf-8894-44a8-b13b-57bd23fc076d",
+												"id": "2382ff42-8494-4415-a3da-0b53b033c095",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -656,7 +656,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "31077fcd-f4ec-4417-b52d-0436777ed989",
+												"id": "35435fcf-e322-4bc5-83c5-8ee3d2de60fd",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -667,7 +667,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "69f8e00a-c525-4bf6-9fb9-95690b1d3783",
+												"id": "cdf901fc-5b04-4902-9cbc-8a09500bd870",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
@@ -735,7 +735,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
+												"id": "7b1ed5d7-7852-4765-b299-ff10322a3771",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -746,7 +746,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "64870af5-68e1-4245-b105-ff44f76796d1",
+												"id": "14c58384-9380-48aa-b796-bac2adf6c234",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -814,7 +814,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
+												"id": "061cee8d-f121-42ba-805f-d06e2036322e",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -825,7 +825,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
+												"id": "7759a986-e6d8-4309-81ef-c70076a79187",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -887,7 +887,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"id": "c09b28a0-fa2b-413d-97c9-32c6532854d5",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -898,7 +898,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"id": "5d5dbb19-955e-4a9b-9a38-b760b9228ae0",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -967,7 +967,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"id": "1eff8b2c-a084-487b-bd9d-ca6d3c0d58e2",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -978,7 +978,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"id": "e1f66b6c-4a55-44e9-b533-e9f8e2ab3dda",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1046,7 +1046,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"id": "f013cb0b-6989-49c6-a646-57bd70f2eac2",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1057,7 +1057,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"id": "efe3fbd5-3b69-43ab-b9c2-423513b6ffa8",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1126,7 +1126,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"id": "a980e83f-9025-4f9c-becd-75dd56479021",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1137,7 +1137,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"id": "c37990b5-ba73-4f59-a8ed-1609055de72d",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1205,7 +1205,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"id": "ced30eae-6a1e-4c35-ad92-3fa831c21130",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1216,7 +1216,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"id": "8145a34f-7cc2-4e43-a19d-f0b35d9c5822",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1305,7 +1305,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
+												"id": "d7f969b0-346a-4f4e-b76e-53cb464c94c6",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1316,7 +1316,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "64870af5-68e1-4245-b105-ff44f76796d1",
+												"id": "044ca76a-c675-431e-a1ee-10cbab38de98",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1385,7 +1385,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
+												"id": "540d99e4-c74a-4b19-b756-b7994bb78980",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1396,7 +1396,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
+												"id": "93b21cd8-e2d0-4461-b537-b9b1cf7ab076",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1465,7 +1465,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
+												"id": "578722b9-ec5c-4b21-ae83-befee673a8cf",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1476,7 +1476,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
+												"id": "59c927fc-43e5-4f69-ad61-1f26ac4deddb",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -1535,7 +1535,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "551e6808-9f14-4ba5-a90d-5f56def55bd4",
+												"id": "f7134d69-8dfe-4233-97c2-3bb76359c9e2",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1546,7 +1546,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "de0c8c27-edf9-410f-b404-262fa7bb88c7",
+												"id": "c7e83eb9-8c33-4a58-9ff0-9e247a1b5edc",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -1605,7 +1605,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
+												"id": "73b9287a-ea90-4597-8a91-68026a599f65",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1616,7 +1616,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "51929099-4add-491c-9a72-79b19b30cefe",
+												"id": "b2d161ce-5517-4fa1-988b-03f035bf1391",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1685,7 +1685,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
+												"id": "b3937ed0-ce69-47f7-9574-3f7101d42a3b",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1696,7 +1696,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
+												"id": "02b4fcaa-d725-4054-aca9-b15b716d5d51",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1765,7 +1765,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "08e85961-5e58-46b9-9a9e-f542485c2a5c",
+												"id": "e330241a-5b7e-467a-9b2b-85802f6c0938",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -1776,7 +1776,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b2c8f2cf-8894-44a8-b13b-57bd23fc076d",
+												"id": "f5bc8d92-6b0b-4627-9036-535cf67e9c5a",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -1835,7 +1835,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "31077fcd-f4ec-4417-b52d-0436777ed989",
+												"id": "bae89542-5122-4e54-916d-125c4529ab30",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1846,7 +1846,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "69f8e00a-c525-4bf6-9fb9-95690b1d3783",
+												"id": "45df37aa-475c-4507-9d49-bd2ecb7d47a5",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -1919,7 +1919,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"id": "26e3592f-ca2e-436c-9258-f9127330cc82",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -1930,7 +1930,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"id": "c322032b-9f0a-4aac-8af6-2f4646735eb3",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -1999,7 +1999,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"id": "6fdcd307-1250-4f65-9a5c-f902822cffcb",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -2010,7 +2010,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"id": "a07ea034-1a0e-4665-97b5-ae071b660f1b",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -2144,7 +2144,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"id": "8406f0ee-d805-44dc-9708-c1e8cda38bcb",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -2205,7 +2205,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "551e6808-9f14-4ba5-a90d-5f56def55bd4",
+												"id": "65d81a70-3387-4adc-9cf4-fbd25bb37e6f",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -2216,7 +2216,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "de0c8c27-edf9-410f-b404-262fa7bb88c7",
+												"id": "ab58b276-3fc8-490c-9ef2-91e6289a9591",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -2284,7 +2284,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "71317a49-951b-4f60-95e4-c3fb2af7b5e0",
+												"id": "de7d494f-d2dd-457d-9fbc-5b90508a0836",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -2295,7 +2295,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "51929099-4add-491c-9a72-79b19b30cefe",
+												"id": "0ca4741c-be5f-450a-bbfd-839e0c9a630a",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
@@ -2373,7 +2373,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "08e85961-5e58-46b9-9a9e-f542485c2a5c",
+												"id": "957d2594-32fc-4e99-bb88-8f912c2a9d66",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -2384,7 +2384,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b2c8f2cf-8894-44a8-b13b-57bd23fc076d",
+												"id": "c1c7e9d6-4cf6-44df-85d1-b280e5e62b47",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -2452,7 +2452,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "31077fcd-f4ec-4417-b52d-0436777ed989",
+												"id": "7322ce25-816d-4e4f-b2cc-9f39dea2828d",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -2463,7 +2463,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "69f8e00a-c525-4bf6-9fb9-95690b1d3783",
+												"id": "fc5b0c15-26f6-4609-b70f-6ab5c8eee338",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
@@ -2541,7 +2541,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "f965b070-37f3-45ca-854a-ee24c3f26ef0",
+												"id": "9d499a12-3e54-4dc7-b8a6-9a5bd4d1409b",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -2552,7 +2552,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "896a12fa-3d52-4670-b7b1-f257065e251c",
+												"id": "28e8e592-238b-43a4-8395-6f10686a3a40",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -2620,7 +2620,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "4fc91a15-8078-4d19-b9fe-9e1446d9e280",
+												"id": "cbde6d00-487c-410f-8b28-6fb6fc0539ee",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -2631,7 +2631,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "97f95cf5-7f90-4d6b-a647-dacc2cc23d6f",
+												"id": "c93bfa37-1b68-45ec-a50d-beacf27ca3eb",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -2713,7 +2713,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2d1071fd-98e3-4aa5-8b82-5b0e4950b23d",
+										"id": "0fd099c5-ae8a-40e7-bb8d-6d14f5e0007e",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -2724,7 +2724,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "84fde366-5ce6-442a-8663-90c908dfc485",
+										"id": "f773a58e-763b-4051-a4e6-95312132b4bc",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -2802,7 +2802,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "2a9070b1-b15a-457d-91de-e3e9a791d070",
+										"id": "f607f1d9-d4ea-45ae-bb8d-eed0990e083f",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -2813,7 +2813,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a2da99b6-de39-4f5f-94b9-42422cf771a7",
+										"id": "3fee5a04-8f27-483c-bee8-ebb4953be8e6",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -2891,7 +2891,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "8ee8d866-7f0b-4f6c-baaa-362386757f48",
+										"id": "346d6c3d-9e31-4fb4-9a8b-2cc44f5d0cae",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -2902,7 +2902,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "64870af5-68e1-4245-b105-ff44f76796d1",
+										"id": "2934054b-d0a7-493b-81a2-a8bfd6b2fd03",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -2980,7 +2980,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "15fdc818-4af4-4f46-a22f-8720feb624a5",
+										"id": "4cbf0c63-ee15-41b4-a90b-beae09cb5a77",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -2991,7 +2991,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "70a37026-ebfa-45e2-b3a6-0d3d79f7acad",
+										"id": "cc8050d9-7d30-4bee-bcc9-020b1a71702e",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3085,7 +3085,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "50846533-e568-4e91-a7bd-e9554eee3e86",
+												"id": "361b9e74-03ce-4d3c-b26f-99678d925bac",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3096,7 +3096,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "18ccb466-48a1-4308-b13e-d5aad7044fb2",
+												"id": "fe7567bb-2416-4122-901e-f8ab86e4fbdf",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -3156,7 +3156,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+												"id": "ef3cadf0-1eea-4097-8070-e92e9175ab0b",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3167,7 +3167,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "64c297cd-611b-412e-9862-d4d090f9a8ad",
+												"id": "04b3fe39-0224-45d2-8714-a8259ce97ee0",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -3227,7 +3227,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+												"id": "d6a644a0-6e96-4189-8ee1-4d5962645658",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3238,7 +3238,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6c15f23b-b98b-4944-be29-aca709613543",
+												"id": "848d5137-ab6c-411b-92be-165ab24d7a0a",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -3298,7 +3298,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+												"id": "21e80bc2-69ec-411f-bfcf-92cf40cba3ee",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3309,7 +3309,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bc17cf84-feea-4756-be87-8df3aac1028c",
+												"id": "2a81752c-1665-4ac4-8cc0-9accac37b306",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -3369,7 +3369,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "695681ec-bda0-429b-9bec-85b319d96e40",
+												"id": "d6baf031-80f3-47d8-b77e-590586135a7b",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3380,7 +3380,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "81341010-cdb1-4602-87e2-f10e5c9c292a",
+												"id": "90d8aeea-f929-4d1b-8d1c-3ee08f582211",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -3440,7 +3440,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "fa950134-21fa-4825-865e-598a44acc202",
+												"id": "81619305-3fa9-4f2d-ada3-f00aab90114e",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3451,7 +3451,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b6e1ce9f-2bc3-4ee6-bfb2-6aca3c10b332",
+												"id": "ca76a6a8-20a8-46b4-886f-92d45b08a663",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(500);",
@@ -3511,7 +3511,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "8aeab38b-c6a2-4cdf-aca6-a8a4667638ac",
+												"id": "1f50378a-8ac3-48c5-b9d2-1deeb5c29747",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3522,7 +3522,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a6278588-0b79-4c06-b680-6495dcfc323e",
+												"id": "3b68885d-92e6-42d6-84d5-c7f895dc068e",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -3586,7 +3586,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "b734608d-1e3b-4bcd-8606-c309e7cea26f",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3597,7 +3597,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
+										"id": "e1e4475b-da1b-4334-ad8d-ad828151383c",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3688,7 +3688,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f51e36ac-7f29-4de9-a23f-e9cebddd852d",
+										"id": "be97983f-ec49-40d2-974a-98641235013e",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3699,7 +3699,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3d28f8cd-e50e-489d-bba6-718a59fdc1e8",
+										"id": "3411c563-2594-41dd-999c-d31e39492d2e",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3790,7 +3790,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "bfbe0137-6cc0-43b0-8b7a-e3491842723c",
+										"id": "32138b27-4fd6-44a2-b1a4-9f28554d7a45",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3801,7 +3801,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "17196aee-5993-4fe3-8deb-d0f5e8373f89",
+										"id": "33bebede-f41c-4f5d-ac93-be18e32b60bc",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3892,7 +3892,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "c9e0e8b1-e071-4238-855e-f3a2d69e4d76",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -3903,7 +3903,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
+										"id": "761dd207-74c7-4781-93af-6f8ab6e597ec",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -3994,7 +3994,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "03ae9be1-4b78-4b9e-98bf-2cba6381d479",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -4005,7 +4005,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
+										"id": "43d83d87-e0b1-4c98-9f2f-f30464b7ba52",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -4096,7 +4096,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "8aa6eb68-9ba8-4856-a779-82d2e991a396",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -4107,7 +4107,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b0f88561-a3fb-4a88-ac74-d434e5551140",
+										"id": "bb522acf-f19b-467b-9c6b-77525b42acc2",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -4198,7 +4198,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "a6d6ccad-94d8-41d4-8661-078cf97f773e",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -4209,7 +4209,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "989b4df8-eb45-41ce-b3ec-1de95a0c5a66",
+										"id": "72148c44-9bd9-4aa8-bcc0-5cbb60f33673",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -4300,7 +4300,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "58762fd7-207b-4211-87ae-da772ff8931e",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -4311,7 +4311,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "775c4f94-434b-4c56-a1b5-93da61f06264",
+										"id": "12e00d56-fccd-485c-a03c-b2d5eb74b2dd",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -4422,7 +4422,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "fa950134-21fa-4825-865e-598a44acc202",
+												"id": "c1514caf-fe4e-4d4a-a81d-3a9791d8a044",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4433,7 +4433,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b6e1ce9f-2bc3-4ee6-bfb2-6aca3c10b332",
+												"id": "b9072d7f-3b63-4f77-9f41-35e72843cf12",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4491,7 +4491,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "50846533-e568-4e91-a7bd-e9554eee3e86",
+												"id": "eb696bb9-1278-4a59-a2b1-6ae6bc24b188",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4502,7 +4502,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6effb0af-9e77-4bcf-b959-867d9d88eccd",
+												"id": "d75cc6fd-94c7-4b80-a970-b0eea10b4a0f",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4560,7 +4560,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "695681ec-bda0-429b-9bec-85b319d96e40",
+												"id": "b446d420-8cb0-443b-9996-1ef8de8eef0a",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4571,7 +4571,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "81341010-cdb1-4602-87e2-f10e5c9c292a",
+												"id": "42474c93-deaa-4d0d-9936-4cf093b084f4",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4629,7 +4629,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+												"id": "83767bb2-4da0-4353-87e3-9b440e7d7b50",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4640,7 +4640,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bc17cf84-feea-4756-be87-8df3aac1028c",
+												"id": "05f2fa8a-e14e-495c-9a89-fbf9d9c44003",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4698,7 +4698,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+												"id": "1632ae27-5e0b-4c9a-ac82-e9044f7a7f41",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4709,7 +4709,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5c05724f-cab0-40d0-a664-7f875659f44d",
+												"id": "5d12c394-8ad1-41bd-824b-ec966c133e58",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4767,7 +4767,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "bfbe0137-6cc0-43b0-8b7a-e3491842723c",
+												"id": "5a47dbea-7797-4a36-9636-6104f83e35ae",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4778,7 +4778,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2ecd172b-2fa2-4eb8-b0dd-8509997c859a",
+												"id": "73e96ead-b590-470c-870c-a646b67c94e5",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4836,7 +4836,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "8aeab38b-c6a2-4cdf-aca6-a8a4667638ac",
+												"id": "c5126cd5-ed11-4544-b581-8f266803d879",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4847,7 +4847,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "28b00d62-d694-4f4a-b03d-4475abc3f2ef",
+												"id": "f9d3600b-d120-4e77-89b8-7ac6e86e842b",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4905,7 +4905,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+												"id": "7793ec27-c0fd-4da2-b365-3aa5d471cdb8",
 												"type": "text/javascript",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
@@ -4916,7 +4916,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b4c3d0bf-9b81-4eaa-8ee0-79661b0808ab",
+												"id": "6afcc345-3a93-4e56-b39c-15b4a8e71dba",
 												"type": "text/javascript",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
@@ -4978,7 +4978,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "6a670b84-4ef3-495b-b40d-d00b67a66403",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -4989,7 +4989,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "56240dfc-e2c9-494c-b3d9-f616d13a7586",
+										"id": "f7791582-914b-4e8d-99c4-d80195fa471c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5052,7 +5052,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "f51e36ac-7f29-4de9-a23f-e9cebddd852d",
+										"id": "7200a733-04aa-446e-aaab-7fdbf00f37ea",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -5063,7 +5063,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "625a1b21-48e9-41bf-b40f-12d317f70116",
+										"id": "9670b731-a486-4f7d-b925-b0984325c8ab",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5126,7 +5126,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "aaa339d5-2bba-4b3b-a420-8e595d8a80f6",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -5137,7 +5137,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "00de6490-002a-4c52-b2b6-243b05f273f6",
+										"id": "5f22efe8-c33a-4ea6-9e3f-8aa3643b14fd",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5200,7 +5200,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "6d7e4b69-216f-45c4-8a15-f255bcc37e27",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -5211,7 +5211,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3f3ec1d9-d768-4a20-ba3a-a987c071486b",
+										"id": "6d42eeac-677c-4c63-b6d5-6c4c5a8baa4c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5274,7 +5274,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "6a51cb88-71c5-4783-9f6b-12937adcad44",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -5285,7 +5285,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "beaf8888-0541-4333-9d27-493e0605f2c9",
+										"id": "70c15901-d3f4-47cc-9bab-288103457dac",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5348,7 +5348,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "a3bcd117-c423-4e52-81ac-b82ef6bf071c",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -5359,7 +5359,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "873f8b8d-400c-4639-b11a-f615f2b0c94e",
+										"id": "4189b3e8-7067-454f-abc7-bce9b0f9ba7b",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5422,7 +5422,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "a842c840-0c41-4d45-b7d0-9f2df658d584",
+										"id": "17784108-c1a4-427d-9f5a-1ec3610de939",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -5433,7 +5433,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "76ba0a35-f72f-4f10-b522-792d6f1eef1b",
+										"id": "1977845e-48e8-4559-8b01-df560b900627",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -5505,7 +5505,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "1105a8a9-cd53-4bee-8458-0465405893d6",
+								"id": "41fbfa95-7abd-45ba-a036-85a2dfe4b928",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5515,7 +5515,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7ccb4b8b-791a-4b73-897b-82fa52604ffa",
+								"id": "3a322b12-bdaf-4927-b148-a299b47b8df0",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -5538,7 +5538,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+												"id": "40379c61-8b08-4a43-b457-b8f796e5a622",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -5557,7 +5557,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "8a3939e8-f846-4740-b486-a512e88c32b7",
+												"id": "0a1a106c-4397-4623-9f35-a9e738f0136b",
 												"exec": [
 													"var moment = require(\"moment\")\r",
 													"\r",
@@ -5605,7 +5605,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"id": "21a6cbd0-f8c7-4390-a2d3-0b2f5d910955",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -5624,7 +5624,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "db75c1f9-a6d7-462d-bd2d-9c14082c442c",
+										"id": "f33b0b1b-84b5-44ea-962e-0406ece972b5",
 										"exec": [
 											"var moment = require(\"moment\")\r",
 											"\r",
@@ -5668,7 +5668,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4cce95b0-1d88-4152-8ece-4f71b9d10c94",
+										"id": "f1ede73b-2c86-45d3-a343-6e52e83b4732",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -5687,7 +5687,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "ca5dec40-e012-43b7-b2bb-9c5bd8b54f6e",
+										"id": "1e0c8409-1711-4853-8bcc-1d36d0280f46",
 										"exec": [
 											"var moment = require(\"moment\")\r",
 											"\r",
@@ -5800,7 +5800,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://{{host}}/v1/users/3409890147454/bank-accounts?",
+									"raw": "https://{{host}}/v1/users/3409890147454/bank-accounts",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -5849,7 +5849,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+												"id": "caf81e5d-972a-49a0-b0cd-ad8f66dceac5",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -5860,7 +5860,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "611b22ba-be18-4588-831e-dc9193b88aff",
+												"id": "28c80988-010b-468a-a10f-7decaa38ad1c",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -5922,7 +5922,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+												"id": "c0c27af2-03f3-4749-995f-f972088c77fd",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -5933,7 +5933,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "bbd68792-7c90-4d8d-bbf4-186dad3533c4",
+												"id": "919bf049-b4b7-44ac-8ce9-57e62fbc6a9b",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -5995,7 +5995,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+												"id": "4011ded6-c673-409a-a8b7-fe07146ccbf4",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6006,7 +6006,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "32a8c510-ca84-4c42-bf45-d0c5a3a508ed",
+												"id": "43f466f4-baf9-47ff-9664-7df1afd5d06f",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -6068,7 +6068,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+												"id": "9b9e28fb-1be4-40e1-924c-afc83c488e96",
 												"exec": [
 													"var milliseconds = new Date().getTime();",
 													"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6079,7 +6079,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "6124e9ad-5875-4398-b11f-9673a6cc24e9",
+												"id": "c4882d58-0912-497a-8906-e7ac7a4e9682",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -6145,7 +6145,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "9c696c39-2b79-4d28-9d2a-6ee6dcd0cf39",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6156,7 +6156,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
+										"id": "642d95c7-0c0a-425f-a90f-06111cc4aa9c",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6238,7 +6238,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "54b3b07c-82ee-436f-be4f-d9d41cfc1e2c",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6249,7 +6249,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
+										"id": "5e7af54f-a1c5-405e-8c07-d37b9c92193d",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6332,7 +6332,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "a8e7d38a-16e4-4f6c-8891-d28cb51f9a30",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6343,7 +6343,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
+										"id": "32a58459-c5ea-44cb-9b93-1d02d99467bf",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6426,7 +6426,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "10d2a12c-5b9b-4b45-b738-3af2f6283641",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6437,7 +6437,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "27686871-3211-45d2-8735-9e4b1403ab59",
+										"id": "b4579c5e-08fe-4aea-8273-b364ad8794a6",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6520,7 +6520,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "00306163-d897-4a1e-b81c-f65b58719f35",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -6531,7 +6531,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3894f424-9142-4cad-a1d5-c80571b29c44",
+										"id": "04bf24e7-3eea-4403-9903-ea123d1640dd",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -6613,7 +6613,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "25b029bf-971c-4402-8dfe-3302eeb9637e",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6624,7 +6624,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4fb4fe67-c670-461f-a6a2-7196bb617599",
+										"id": "bf809913-7085-4642-8335-2090183f0c3f",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6706,7 +6706,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "5ed71432-bfe9-4926-8148-56e9780e8df0",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6717,7 +6717,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4fb4fe67-c670-461f-a6a2-7196bb617599",
+										"id": "52d88752-69c0-414c-a839-d5fc786c3974",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6799,7 +6799,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "ead7aa8e-e830-452a-b28d-931a400df14b",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -6810,7 +6810,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "65255ef0-6df9-4835-8c04-5efa9faf2c6d",
+										"id": "6f7a22c1-73cd-4970-b495-c4055d9dbce4",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6892,7 +6892,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "56787b15-17a6-4878-bbf4-70e6eb2f4022",
+										"id": "8b22ea04-b775-4964-b83a-35c1318b7a47",
 										"exec": [
 											"",
 											"",
@@ -6913,7 +6913,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "419958e3-8aa0-4fab-bfc8-5c178bf59eff",
+										"id": "87dba922-9de1-4ac6-a295-f3381c95784a",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -6995,7 +6995,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
+										"id": "342e05dc-6969-44e7-b602-59bd89c8c023",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -7006,7 +7006,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "2a1da229-87d4-4d4f-861c-0c7c430d9ab5",
+										"id": "af080f9f-2b90-4926-a867-99680f306619",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -7105,7 +7105,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
+										"id": "b8352d2f-bf9e-43c9-85be-cb7cecfee315",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -7146,7 +7146,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
+										"id": "69c2dc87-2b16-4ad5-b27d-9bb409412021",
 										"type": "text/javascript",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
@@ -7187,7 +7187,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
+										"id": "60293728-afbe-4e81-969e-8ffd2f94e0ac",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -7228,7 +7228,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "3dd85370-3e2e-41ea-ad23-527c26fb8aba",
+										"id": "7ad90d09-d25e-4b67-9acb-3c810f484a2b",
 										"exec": [
 											"var milliseconds = new Date().getTime();",
 											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
@@ -7746,7 +7746,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "8122913a-330a-4728-969e-9ca211109705",
+								"id": "4bd4c18c-8efb-47e7-86b5-6975ae3839b9",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -7756,7 +7756,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5f0337fe-4ac4-4506-a504-2986db3bf8a6",
+								"id": "aa7286b5-ab06-47c1-b3dd-eb903d2f9584",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -8160,7 +8160,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "90a7bd94-f3cb-4283-bebf-dd3130215e5a",
+								"id": "3e16e999-6e0b-4a60-b507-0d8a9c528bbb",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -8170,7 +8170,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3fb6bed5-43c3-4e00-b807-2a4cf2880d45",
+								"id": "b8bbcd38-9b74-4414-9edc-83a9abb01cab",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -8199,7 +8199,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "63827a8a-4dd4-4c7d-a20f-44925cefbf18",
+												"id": "6fc5259c-aade-44c3-bfea-1c95bf86c7b7",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -8256,7 +8256,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "f7d80502-4942-42ad-9fce-865d30a3e465",
+												"id": "9527ca70-df1f-4bf4-98e3-de39e41aced7",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -8313,7 +8313,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c28b9872-1613-4cff-9857-28092eb56869",
+												"id": "8f4dd20f-352c-4b0a-ace4-109fe6e574c2",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -8376,7 +8376,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "006f06ce-7e0d-4af1-b8aa-863c900de675",
+												"id": "9d299882-9699-4d3b-9270-a75d56009f16",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -8443,7 +8443,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"id": "17fd536b-0cb4-48ca-8956-aac211065352",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -8500,7 +8500,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6b23a3bb-ebee-47fc-9958-99c6cb2ee393",
+										"id": "d7e3b202-5b09-416b-97ca-73cb557429fa",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -8577,7 +8577,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "63827a8a-4dd4-4c7d-a20f-44925cefbf18",
+												"id": "4443c6ea-fb6f-4a02-94dd-dda90b0bf65d",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -8637,7 +8637,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "f7d80502-4942-42ad-9fce-865d30a3e465",
+												"id": "776f3dd1-2fc2-44e1-aa5a-55f235ac5c32",
 												"exec": [
 													"pm.test(\"Successful POST request\", function () {",
 													"    pm.response.to.be.ok;",
@@ -8697,7 +8697,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "c28b9872-1613-4cff-9857-28092eb56869",
+												"id": "6e42379a-a617-4f90-a0af-37568aba27a8",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -8763,7 +8763,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "006f06ce-7e0d-4af1-b8aa-863c900de675",
+												"id": "00379fe8-0949-4490-82d4-6bcf32633ff1",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -8829,7 +8829,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "01895163-1522-4ee3-ac03-518ad93b251b",
+												"id": "765ab95f-8f1f-435f-abb7-e55cca491b40",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -8895,7 +8895,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "03b3c9f6-c273-45e6-b1d9-24f1077c718b",
+												"id": "5739616a-6869-4fdb-915a-41354e8c23f7",
 												"exec": [
 													"pm.test(\"Successful 400 Bad Request Error\", function () {",
 													"    pm.response.to.have.status(400);",
@@ -8965,7 +8965,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"id": "45348f58-4548-4104-a19f-e96b78486749",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -9002,7 +9002,7 @@
 									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1200\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
 								},
 								"url": {
-									"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes?",
+									"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
 									"protocol": "https",
 									"host": [
 										"{{host}}"
@@ -9032,7 +9032,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6b23a3bb-ebee-47fc-9958-99c6cb2ee393",
+										"id": "171bf679-5697-4765-8ca2-9d6da35456a7",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
 											"    pm.response.to.be.ok;",
@@ -9109,7 +9109,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"id": "0a2040e0-8939-474a-8b71-786db2a46951",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -9166,7 +9166,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"id": "39051ad6-5e03-417c-a61e-15dcdca4cee1",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -9223,7 +9223,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"id": "5277cb35-211e-45b8-889f-11d885149511",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -9280,7 +9280,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
+										"id": "899cabf2-74eb-4a56-90d9-55b36b93827c",
 										"type": "text/javascript",
 										"exec": [
 											"pm.test(\"Successful POST request\", function () {",
@@ -9346,7 +9346,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "4a103140-b744-4777-bdeb-6e22459e1a2e",
+								"id": "b6d3aa72-772d-4235-a137-7110c7946d4f",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9356,7 +9356,267 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3917e946-1d98-43c0-8daa-b3576205e009",
+								"id": "f4c2e713-4a90-4457-9191-785db2ef1683",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Quotes [examples]",
+					"item": [
+						{
+							"name": "Step 1. GET FX Quote [sellAmount]",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "76db2781-ae3e-4d6e-bdb9-1925bfc5c0dd",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"bodyData = JSON.parse(responseBody);",
+											"",
+											"//store fxTicketID data",
+											"fxTicketID = bodyData.fxTicketID;",
+											"",
+											"//store sellAmount data",
+											"sellAmount = bodyData.fxDetail.sellAmount;",
+											"currency = sellAmount.currency,",
+											"amount = sellAmount.amount;",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"});",
+											"",
+											"//set variables",
+											"pm.environment.set(\"fxTicketID\", fxTicketID);",
+											"pm.environment.set(\"sellCurrency\", currency);",
+											"pm.environment.set(\"sellAmount\", amount);",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890151126",
+										"bank-accounts",
+										"4138896",
+										"quotes"
+									],
+									"query": [
+										{
+											"key": "idType",
+											"value": "merchant",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Step 1. GET FX Quote [buyAmount]",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bbe23f87-de47-4947-af0c-7c0f2187ba99",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"bodyData = JSON.parse(responseBody);",
+											"",
+											"//store fxTicketID data",
+											"fxTicketID = bodyData.fxTicketID;",
+											"",
+											"//store sellAmount data",
+											"sellAmount = bodyData.fxDetail.sellAmount;",
+											"currency = sellAmount.currency,",
+											"amount = sellAmount.amount;",
+											"",
+											"pm.test(\"Response contains fxTicketID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
+											"});",
+											"",
+											"//set variables",
+											"pm.environment.set(\"fxTicketID\", fxTicketID);",
+											"pm.environment.set(\"sellCurrency\", currency);",
+											"pm.environment.set(\"sellAmount\", amount);",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890151126",
+										"bank-accounts",
+										"4138896",
+										"quotes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Step 2. Post Payments w/ FX Quote",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "33869bbf-ef57-4c50-9454-cae4ed18ba0d",
+										"exec": [
+											"var milliseconds = new Date().getTime();",
+											"pm.globals.set(\"current_time_in_ms\", milliseconds);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "83c29c60-a897-4bf2-bcab-1ab4a2555817",
+										"exec": [
+											"pm.test(\"Successful POST request\", function () {",
+											"    pm.response.to.be.ok;",
+											"});",
+											"",
+											"pm.test(\"Response contains merchantTransactionID\", function () {",
+											"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
+											"    var jsonData = pm.response.json();",
+											"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
+											"    console.log('merchantTransactionID=='+merchantTransactionID);",
+											"",
+											"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
+											"});",
+											"",
+											"pm.test(\"Response contains Earthport generated transactionID\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
+											"    ",
+											"    var jsonData = pm.response.json();",
+											"    var epTransactionID = jsonData.transactionID.epTransactionID;",
+											"    ",
+											"    console.log('epTransactionID=='+epTransactionID);",
+											"    ",
+											"    //Earthport bank ID is numeric",
+											"    var pattern = new RegExp(\"^[0-9]*$\");",
+											"    var match = pattern.test(epTransactionID);",
+											"    ",
+											"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
+											"    ",
+											"    pm.expect(match).to.be.true;",
+											"});",
+											"",
+											"//Clear down global variable",
+											"pm.globals.unset(\"current_time_in_ms\");"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"currency\": \"{{sellCurrency}}\",\r\n\t\t\"amount\": {{sellAmount}}\r\n\t},\r\n\t\"fxTicketID\": {{fxTicketID}},\r\n\t\"payerType\": \"user\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\"\r\n}"
+								},
+								"url": {
+									"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/payments",
+									"protocol": "https",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"v1",
+										"users",
+										"3409890151126",
+										"bank-accounts",
+										"4138896",
+										"payments"
+									]
+								},
+								"description": "This test assumes you have registered a GB/GBP beneficiary bank account which is being passed in the URL."
+							},
+							"response": []
+						}
+					],
+					"description": "### Summary\n\nHere we've provided an example 'Quotes' collection that was put together as a visual aid, with the primary purpose of showing how payments are made using an FX ticketID - which was provided by a sell amount or buy amount quote. This should demonstrate the procedure of requesting a quote, to obtaining a FX ticketID, as well as the data that needs to be passed into the payment request body. \n\n\n### Getting Started\n\nNote: Please make sure you have Authenticated first. \n\n1. Start by selecting either 'sellAmount' or 'buyAmount', you can leave it how it is or you can input any amount of your choosing. You can change the currency code for the 'sellCurrency' if you wish, however the currency code must be GBP for 'buyCurrency' in order for this to work. This is because the sample bankID supplied within the URL is a beneficiary bank account that has been created for an GBP account. Should you choose to change the bankID to one you've created then the 'buyCurrency' will also need to change to the currency code of that bank account. \n\n2. Once you've sent the request, then 'ticketID', 'sellCurrency' and 'sellAmount' will be passed as a variable into the Payments request body. Open the 'Post Payments with FX' and send that request. This should automatically fill in the required fields for making payments using a ticketID. If you dive into the body for 'Post Payments' you'll see for example: {{fxTicketID}} , this is retrieving mandatory information from the quote request earlier.",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "755ba87c-9ebf-4b8b-a970-ac5cd9c37b96",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5bf5407-c2dc-41bd-94f0-f8cd19472c5a",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9531,7 +9791,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "ce52accf-6d42-49f6-9e45-20fa816ac883",
+								"id": "0b3576e8-7c1c-49ac-a892-3d8f4a0f0191",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9541,7 +9801,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4c48b57f-0244-48a4-8183-3aa710d1f2b0",
+								"id": "800678dd-9cf8-44d3-bcc7-ed4f33e92208",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9898,7 +10158,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "865d8168-f3f1-4e02-8ab2-bba8c1c718e6",
+								"id": "4db0e9cd-2586-42f1-b7c8-df37777d54b9",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9908,7 +10168,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "fc5c5c57-036a-4c93-8ef6-7a26d426c02c",
+								"id": "44955c08-8085-4e02-9f03-741aeaa2e2d2",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -9918,265 +10178,6 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Quotes [example] ",
-			"item": [
-				{
-					"name": "GET FX Quote [sellAmount]",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "c562ade0-0b32-4fa2-862a-0ba95ec3626b",
-								"exec": [
-									"pm.test(\"Successful POST request\", function () {",
-									"    pm.response.to.be.ok;",
-									"});",
-									"",
-									"bodyData = JSON.parse(responseBody);",
-									"",
-									"//store fxTicketID data",
-									"fxTicketID = bodyData.fxTicketID;",
-									"",
-									"//store sellAmount data",
-									"sellAmount = bodyData.fxDetail.sellAmount;",
-									"currency = sellAmount.currency,",
-									"amount = sellAmount.amount;",
-									"",
-									"pm.test(\"Response contains fxTicketID\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
-									"});",
-									"",
-									"//set variables",
-									"pm.environment.set(\"fxTicketID\", fxTicketID);",
-									"pm.environment.set(\"sellCurrency\", currency);",
-									"pm.environment.set(\"sellAmount\", amount);",
-									"",
-									"//Clear down global variable",
-									"pm.globals.unset(\"current_time_in_ms\");"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": " {\n        \"sellAmount\": {\n            \"currency\": \"EUR\",\n            \"amount\": 1000\n        },\n        \"buyCurrency\": \"GBP\",\n        \"serviceLevel\": \"standard\"\n\n}\n"
-						},
-						"url": {
-							"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes?",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"3409890151126",
-								"bank-accounts",
-								"4138896",
-								"quotes"
-							],
-							"query": [
-								{
-									"key": "idType",
-									"value": "merchant",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET FX Quote [buyAmount]",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "6b23a3bb-ebee-47fc-9958-99c6cb2ee393",
-								"exec": [
-									"pm.test(\"Successful POST request\", function () {",
-									"    pm.response.to.be.ok;",
-									"});",
-									"",
-									"bodyData = JSON.parse(responseBody);",
-									"",
-									"//store fxTicketID data",
-									"fxTicketID = bodyData.fxTicketID;",
-									"",
-									"//store sellAmount data",
-									"sellAmount = bodyData.fxDetail.sellAmount;",
-									"currency = sellAmount.currency,",
-									"amount = sellAmount.amount;",
-									"",
-									"pm.test(\"Response contains fxTicketID\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"fxTicketID\");",
-									"});",
-									"",
-									"//set variables",
-									"pm.environment.set(\"fxTicketID\", fxTicketID);",
-									"pm.environment.set(\"sellCurrency\", currency);",
-									"pm.environment.set(\"sellAmount\", amount);",
-									"",
-									"//Clear down global variable",
-									"pm.globals.unset(\"current_time_in_ms\");"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": " {\n        \"buyAmount\": {\n            \"currency\": \"GBP\",\n            \"amount\": 1000\n        },\n        \"sellCurrency\": \"EUR\",\n        \"serviceLevel\": \"standard\"\n}\n"
-						},
-						"url": {
-							"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/quotes",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"3409890151126",
-								"bank-accounts",
-								"4138896",
-								"quotes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Post Payments w/ FX Quote",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "45737e76-0dce-44cd-ba7d-234838d184a5",
-								"exec": [
-									"var milliseconds = new Date().getTime();",
-									"pm.globals.set(\"current_time_in_ms\", milliseconds);"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "2389dedc-0a68-44aa-a770-679f078d7dad",
-								"exec": [
-									"pm.test(\"Successful POST request\", function () {",
-									"    pm.response.to.be.ok;",
-									"});",
-									"",
-									"pm.test(\"Response contains merchantTransactionID\", function () {",
-									"    var expected_merchant_tx_id = \"txID_\" + pm.globals.get(\"current_time_in_ms\");",
-									"    var jsonData = pm.response.json();",
-									"    var merchantTransactionID=jsonData.transactionID.merchantTransactionID;",
-									"    console.log('merchantTransactionID=='+merchantTransactionID);",
-									"",
-									"    pm.expect(merchantTransactionID).to.eql(expected_merchant_tx_id);",
-									"});",
-									"",
-									"pm.test(\"Response contains Earthport generated transactionID\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"epTransactionID\");",
-									"    ",
-									"    var jsonData = pm.response.json();",
-									"    var epTransactionID = jsonData.transactionID.epTransactionID;",
-									"    ",
-									"    console.log('epTransactionID=='+epTransactionID);",
-									"    ",
-									"    //Earthport bank ID is numeric",
-									"    var pattern = new RegExp(\"^[0-9]*$\");",
-									"    var match = pattern.test(epTransactionID);",
-									"    ",
-									"    console.log('pattern.test(epTransactionID)=='+pattern.test(epTransactionID));",
-									"    ",
-									"    pm.expect(match).to.be.true;",
-									"});",
-									"",
-									"//Clear down global variable",
-									"pm.globals.unset(\"current_time_in_ms\");"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n\t\"transactionID\": {\r\n\t\t\"merchantTransactionID\": \"txID_{{current_time_in_ms}}\"\r\n\t},\r\n\t\"payoutRequestAmount\": {\r\n\t\t\"currency\": \"{{sellCurrency}}\",\r\n\t\t\"amount\": {{sellAmount}}\r\n\t},\r\n\t\"fxTicketID\": {{fxTicketID}},\r\n\t\"payerType\": \"user\",\r\n\t\"beneficiaryStatementNarrative\": \"Free Text Description\"\r\n}"
-						},
-						"url": {
-							"raw": "https://{{host}}/v1/users/3409890151126/bank-accounts/4138896/payments",
-							"protocol": "https",
-							"host": [
-								"{{host}}"
-							],
-							"path": [
-								"v1",
-								"users",
-								"3409890151126",
-								"bank-accounts",
-								"4138896",
-								"payments"
-							]
-						},
-						"description": "This test assumes you have registered a GB/GBP beneficiary bank account with an Earthport bank ID = 4034215. Not in the sample body that the currency of the payout request amount differs from the beneficiary bank account."
-					},
-					"response": []
-				}
-			],
-			"description": "### Summary\n\nHere we've provided an example 'Quotes' collection that was put together as a visual aid, with the primary purpose of showing how payments are made using an FX ticketID - which was provided by a sell amount or buy amount quote. This should demonstrate the procedure of requesting a quote, to obtaining a FX ticketID, as well as the data that needs to be passed into the payment request body. \n\n\n### Getting Started\n\nNote: Please make sure you have Authenticated first. \n\n1. Start by selecting either 'sellAmount' or 'buyAmount', you can leave it how it is or you can input any amount of your choosing. You can change the currency code for the 'sellCurrency' if you wish, however the currency code must be GBP for 'buyCurrency' in order for this to work. This is because the sample bankID supplied within the URL is a beneficiary bank account that has been created for an GBP account. Should you choose to change the bankID to one you've created then the 'buyCurrency' will also need to change to the currency code of that bank account. \n\n2. Once you've sent the request, then 'ticketID', 'sellCurrency' and 'sellAmount' will be passed as a variable into the Payments request body. Open the 'Post Payments with FX' and send that request. This should automatically fill in the required fields for making payments using a ticketID. If you dive into the body for 'Post Payments' you'll see for example: {{fxTicketID}} , this is retrieving mandatory information from the quote request earlier.",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "76321ae7-370d-49cb-b1ed-5c9fc7515ffc",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"id": "a2c61347-d73d-45c5-a706-aff636ab46c6",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -10196,7 +10197,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b3852332-9c5f-463a-b0d4-74715f7fe6de",
+				"id": "62d9a07b-a033-4704-a1c0-836f546a9001",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -10206,7 +10207,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "60058b50-4a67-48b3-b6a6-31359282a70a",
+				"id": "f98608d8-e49c-4441-bb73-6168123d3824",
 				"type": "text/javascript",
 				"exec": [
 					""
